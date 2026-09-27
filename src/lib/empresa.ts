@@ -13,5 +13,5 @@ const WHATSAPP_NUMERO = "5584996385174";
 const WHATSAPP_MENSAGEM = "Olá! Gostaria de solicitar uma proposta da JB Serviços para o meu condomínio.";
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(WHATSAPP_MENSAGEM)}`;
 
-export const JB_GESTAO_URL = "https://jb-gestao-painel-web.vercel.app";
+export const JB_GESTAO_URL = "https://jb-gestao-cond.jbservicosrn.com.br";
 export const SITE_URL = "https://jbservicosrn.com.br";
