@@ -273,6 +273,38 @@ export default function ComoFunciona() {
         </a>
       </section>
 
+      {/* Vídeo demonstrativo — gravado em 27/09/2026 no painel real, com o
+          "Condomínio Demonstração" (dados 100% fictícios). */}
+      <section className="border-b border-jb-line bg-white">
+        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
+          <div className="text-center">
+            <p className="text-xs font-semibold uppercase tracking-widest text-jb-orange">Demonstração</p>
+            <h2 className="mt-2 font-display text-3xl font-extrabold text-jb-navy">Veja o JB Gestão em 1 minuto</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-jb-ink-soft">
+              Ocorrências, encomendas, agenda administrativa, relatórios e a assistente de IA, no painel de verdade,
+              com um condomínio de demonstração.
+            </p>
+          </div>
+          <video
+            className="mt-8 aspect-video w-full rounded-2xl border border-jb-line bg-jb-navy shadow-jb"
+            controls
+            preload="none"
+            playsInline
+            poster="/jb-gestao-em-1-minuto-capa.jpg"
+          >
+            <source src="/jb-gestao-em-1-minuto.mp4" type="video/mp4" />
+            Seu navegador não reproduz vídeos.{" "}
+            <a href="/jb-gestao-em-1-minuto.mp4" className="underline">
+              Baixe o vídeo
+            </a>
+            .
+          </video>
+          <p className="mt-3 text-center text-xs text-jb-ink-soft">
+            Dados fictícios. O atendimento pelo WhatsApp oficial está em implantação.
+          </p>
+        </div>
+      </section>
+
       {/* O problema */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <Titulo
