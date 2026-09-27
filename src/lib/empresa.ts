@@ -7,11 +7,11 @@ export const EMPRESA_EMAIL = "jbservicosrn@gmail.com";
 export const EMPRESA_CIDADE = "Natal/RN";
 export const EMPRESA_FUNDACAO = 2020;
 
-// WhatsApp comercial: exibição e link (wa.me exige 55 + DDD + número).
-export const WHATSAPP_EXIBICAO = "(84) 99638-5174";
-const WHATSAPP_NUMERO = "5584996385174";
-const WHATSAPP_MENSAGEM = "Olá! Gostaria de solicitar uma proposta da JB Serviços para o meu condomínio.";
-export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(WHATSAPP_MENSAGEM)}`;
+// Propostas só por e-mail por enquanto (27/09/2026): o WhatsApp comercial,
+// (84) 99638-5174, fica fora do site até existir uma rotina de atendimento
+// automatizado para novos clientes.
+const PROPOSTA_ASSUNTO = "Solicitação de proposta — JB Serviços";
+export const PROPOSTA_EMAIL_LINK = `mailto:${EMPRESA_EMAIL}?subject=${encodeURIComponent(PROPOSTA_ASSUNTO)}`;
 
 export const JB_GESTAO_URL = "https://jb-gestao-cond.jbservicosrn.com.br";
 export const SITE_URL = "https://jbservicosrn.com.br";

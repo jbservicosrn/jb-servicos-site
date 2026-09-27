@@ -16,7 +16,7 @@ ambiente.
 
 | O quê | Arquivo |
 |---|---|
-| Telefone/WhatsApp, e-mail, CNPJ, link do JB Gestão | `src/lib/empresa.ts` |
+| E-mail, CNPJ, link do JB Gestão | `src/lib/empresa.ts` |
 | Textos da página inicial (serviços, diferenciais etc.) | `src/app/page.tsx` |
 | Menu do topo | `src/components/cabecalho.tsx` |
 | Rodapé | `src/components/rodape.tsx` |

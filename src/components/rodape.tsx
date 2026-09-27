@@ -5,8 +5,6 @@ import {
   EMPRESA_NOME,
   EMPRESA_RAZAO_SOCIAL,
   JB_GESTAO_URL,
-  WHATSAPP_EXIBICAO,
-  WHATSAPP_LINK,
 } from "@/lib/empresa";
 
 export default function Rodape() {
@@ -18,14 +16,13 @@ export default function Rodape() {
           <p className="font-display text-base font-bold text-white">{EMPRESA_NOME}</p>
           <p className="mt-2">Terceirização de serviços para condomínios.</p>
           <p className="mt-1">{EMPRESA_CIDADE}</p>
+          <p className="mt-3 text-xs">
+            Serviços presenciais em Natal e região metropolitana. Soluções de tecnologia para todo o
+            Brasil.
+          </p>
         </div>
         <div className="space-y-1">
           <p className="font-semibold text-white">Contato</p>
-          <p>
-            <a href={WHATSAPP_LINK} className="hover:text-white">
-              WhatsApp {WHATSAPP_EXIBICAO}
-            </a>
-          </p>
           <p>
             <a href={`mailto:${EMPRESA_EMAIL}`} className="hover:text-white">
               {EMPRESA_EMAIL}

@@ -13,14 +13,12 @@ import {
   IconeSeta,
   IconeTransparencia,
   IconeVigia,
-  IconeWhatsapp,
 } from "@/components/icones";
 import {
   EMPRESA_EMAIL,
   EMPRESA_FUNDACAO,
   JB_GESTAO_URL,
-  WHATSAPP_EXIBICAO,
-  WHATSAPP_LINK,
+  PROPOSTA_EMAIL_LINK,
 } from "@/lib/empresa";
 
 const SERVICOS = [
@@ -125,8 +123,8 @@ export default function Inicio() {
               transparência à rotina do condomínio.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={WHATSAPP_LINK} className={botaoPrincipal}>
-                <IconeWhatsapp className="h-5 w-5" />
+              <a href={PROPOSTA_EMAIL_LINK} className={botaoPrincipal}>
+                <IconeEmail className="h-5 w-5" />
                 Solicitar proposta
               </a>
               <a
@@ -237,33 +235,43 @@ export default function Inicio() {
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
           <TituloSecao rotulo="Contato" titulo="Vamos conversar sobre o seu condomínio?" />
           <p className="mt-3 max-w-2xl text-jb-ink-soft">
-            Fale com a gente e receba uma proposta sob medida para o seu condomínio.
+            Envie um e-mail contando um pouco sobre o seu condomínio e o que você precisa. Nossa
+            equipe responde com uma proposta sob medida.
           </p>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             <a
-              href={WHATSAPP_LINK}
-              className="group rounded-2xl border border-jb-line bg-jb-ground p-6 transition hover:border-jb-orange"
-            >
-              <IconeWhatsapp className="h-7 w-7 text-jb-orange" />
-              <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-jb-ink-soft">WhatsApp</p>
-              <p className="mt-1 font-display text-lg font-bold text-jb-navy group-hover:text-jb-orange-600">
-                {WHATSAPP_EXIBICAO}
-              </p>
-            </a>
-            <a
-              href={`mailto:${EMPRESA_EMAIL}`}
-              className="group rounded-2xl border border-jb-line bg-jb-ground p-6 transition hover:border-jb-orange"
+              href={PROPOSTA_EMAIL_LINK}
+              className="group rounded-2xl border border-jb-orange bg-jb-orange-100/40 p-6 transition hover:bg-jb-orange-100"
             >
               <IconeEmail className="h-7 w-7 text-jb-orange" />
-              <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-jb-ink-soft">E-mail</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-jb-ink-soft">
+                Solicite sua proposta
+              </p>
               <p className="mt-1 break-all font-display text-lg font-bold text-jb-navy group-hover:text-jb-orange-600">
                 {EMPRESA_EMAIL}
               </p>
             </a>
             <div className="rounded-2xl border border-jb-line bg-jb-ground p-6">
               <IconeLocal className="h-7 w-7 text-jb-orange" />
-              <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-jb-ink-soft">Atendimento</p>
-              <p className="mt-1 font-display text-lg font-bold text-jb-navy">Natal/RN</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-jb-ink-soft">
+                Serviços presenciais
+              </p>
+              <p className="mt-1 font-display text-lg font-bold text-jb-navy">
+                Natal e região metropolitana
+              </p>
+              <p className="mt-2 text-sm text-jb-ink-soft">
+                Portaria, ronda, vigia, monitoramento, limpeza e jardinagem.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-jb-line bg-jb-ground p-6">
+              <IconeAutomacao className="h-7 w-7 text-jb-orange" />
+              <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-jb-ink-soft">
+                Soluções de tecnologia
+              </p>
+              <p className="mt-1 font-display text-lg font-bold text-jb-navy">Todo o Brasil</p>
+              <p className="mt-2 text-sm text-jb-ink-soft">
+                Gestão inteligente e automação para condomínios, com atendimento remoto.
+              </p>
             </div>
           </div>
         </div>

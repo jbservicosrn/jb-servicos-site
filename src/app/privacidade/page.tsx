@@ -33,9 +33,9 @@ export default function Privacidade() {
           publicidade. Não coletamos dados pessoais pelo site.
         </p>
 
-        <h2>2. Contato pelo WhatsApp ou e-mail</h2>
+        <h2>2. Contato por e-mail</h2>
         <p>
-          Quando você fala com a gente pelos botões de WhatsApp ou e-mail, recebemos as informações
+          Quando você fala com a gente por e-mail, recebemos as informações
           que você decidir enviar (como nome, telefone e dados do condomínio). Usamos esses dados
           apenas para responder e preparar propostas, e não os repassamos a terceiros.
         </p>
