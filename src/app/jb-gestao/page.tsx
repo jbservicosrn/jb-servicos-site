@@ -18,7 +18,14 @@ import {
   IconeSeta,
   IconeTransparencia,
 } from "@/components/icones";
-import { CartaoOcorrencia, ConversaPortaria, ConversaSindico, PainelInicio } from "@/components/ilustracoes";
+import {
+  AvisoMorador,
+  CartaoOcorrencia,
+  ConversaEncomenda,
+  ConversaPortaria,
+  ConversaSindico,
+  PainelInicio,
+} from "@/components/ilustracoes";
 import { DEMONSTRACAO_EMAIL_LINK, JB_GESTAO_URL } from "@/lib/empresa";
 
 export const metadata: Metadata = {
@@ -217,10 +224,10 @@ export default function ComoFunciona() {
     <main>
       {/* Abertura */}
       <section className="bg-jb-navy">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 md:grid-cols-[1.15fr_1fr] md:py-24">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-8 pt-12 sm:px-6 md:grid-cols-[1.15fr_1fr] md:pt-14">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-jb-orange">JB Gestão Condominial</p>
-            <h1 className="mt-3 font-display text-4xl font-extrabold leading-tight text-white sm:text-5xl">
+            <h1 className="mt-3 font-display text-3xl font-extrabold leading-tight text-white sm:text-[2.6rem]">
               Tudo o que acontece no seu condomínio, registrado, organizado e na palma da sua mão.
             </h1>
             <p className="mt-5 text-lg text-white/80">
@@ -232,9 +239,9 @@ export default function ComoFunciona() {
               Já em uso em um condomínio em Parnamirim/RN
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={DEMONSTRACAO_EMAIL_LINK} className={botaoPrincipal}>
-                <IconeEmail className="h-5 w-5" />
-                Solicitar demonstração
+              <a href="#como-funciona" className={botaoPrincipal}>
+                Veja como funciona
+                <IconeSeta className="h-4 w-4 rotate-90" />
               </a>
               <a
                 href={JB_GESTAO_URL}
@@ -247,6 +254,15 @@ export default function ComoFunciona() {
           </div>
           <PainelInicio />
         </div>
+        <a
+          href="#como-funciona"
+          className="flex flex-col items-center gap-1 pb-5 text-xs font-semibold uppercase tracking-widest text-white/60 transition hover:text-white"
+        >
+          Role para conhecer o sistema
+          <span className="animate-bounce">
+            <IconeSeta className="h-5 w-5 rotate-90" />
+          </span>
+        </a>
       </section>
 
       {/* O problema */}
@@ -270,7 +286,7 @@ export default function ComoFunciona() {
       {/* Como funciona */}
       <section id="como-funciona" className="border-y border-jb-line bg-white">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-          <Titulo rotulo="Como funciona" titulo="Três passos, do portão até a decisão do síndico" />
+          <Titulo rotulo="Como funciona" titulo="Do portão até a decisão da gestão" />
           <div className="mt-14 space-y-20">
             <Passo
               numero="1"
@@ -287,9 +303,21 @@ export default function ComoFunciona() {
             />
             <Passo
               numero="3"
-              titulo="O síndico acompanha e decide"
+              titulo="A encomenda chega e o morador é avisado na hora"
+              texto="O porteiro fotografa a encomenda e manda pelo WhatsApp com o bloco e o apartamento. O sistema registra e envia, pelo próprio WhatsApp, um aviso ao morador. Na retirada, o porteiro informa, e fica tudo registrado: quem recebeu, quando chegou e quando foi entregue."
+              ilustracao={
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <ConversaEncomenda />
+                  <AvisoMorador />
+                </div>
+              }
+            />
+            <Passo
+              numero="4"
+              titulo="O síndico(a) ou administrador(a) acompanha e decide"
               texto="Pelo painel web, no computador ou no celular, ou perguntando direto no WhatsApp. Os avisos do que é urgente chegam na hora, e o histórico fica guardado para consulta e prestação de contas."
               ilustracao={<ConversaSindico />}
+              invertido
             />
           </div>
         </div>

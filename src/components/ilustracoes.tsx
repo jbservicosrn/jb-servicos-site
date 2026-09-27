@@ -50,11 +50,49 @@ export function ConversaPortaria() {
         <br />
         Garagem · Prioridade <strong>alta</strong> · foto anexada
       </Balao>
-      <Balao de="porteiro">Chegou encomenda pro bloco B, apto 302</Balao>
-      <Balao de="sistema">
-        📦 Encomenda <strong className="font-mono text-[12px]">EN-20261002-0031</strong> registrada. O morador
-        já foi avisado pelo WhatsApp.
+    </Celular>
+  );
+}
+
+export function ConversaEncomenda() {
+  return (
+    <Celular titulo="JB Gestão Condominial" subtitulo="Portaria · Turno diurno">
+      <Balao de="porteiro">
+        <div className="mb-1.5 flex h-20 items-center justify-center rounded-lg bg-jb-navy-100 text-[11px] text-jb-ink-soft">
+          📷 foto da encomenda
+        </div>
+        Chegou encomenda pro bloco B, apto 302
       </Balao>
+      <Balao de="sistema">
+        📦 Encomenda registrada
+        <br />
+        <strong className="font-mono text-[12px]">EN-20261002-0031</strong>
+        <br />
+        Bloco B · Apto 302 · foto anexada
+        <br />✅ Morador avisado pelo WhatsApp
+      </Balao>
+      <Balao de="porteiro">Moradora do 302 retirou agora</Balao>
+      <Balao de="sistema">
+        ✅ Retirada registrada às 18:42. Encomenda <strong className="font-mono text-[12px]">EN-20261002-0031</strong>{" "}
+        entregue.
+      </Balao>
+    </Celular>
+  );
+}
+
+export function AvisoMorador() {
+  return (
+    <Celular titulo="JB Gestão Condominial" subtitulo="Mensagem para a moradora">
+      <Balao de="sistema">
+        Olá, Ana! 📦
+        <br />
+        Chegou uma encomenda para você (Bloco B · Apto 302).
+        <br />
+        Ela está guardada na portaria e pode ser retirada quando for melhor para você.
+        <br />
+        <span className="text-[11px] text-jb-ink-soft">Código: EN-20261002-0031</span>
+      </Balao>
+      <Balao de="sindico">Obrigada! Passo aí à noite 🙏</Balao>
     </Celular>
   );
 }
