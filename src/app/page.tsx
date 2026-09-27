@@ -1,0 +1,260 @@
+import {
+  IconeDocumento,
+  IconeEmail,
+  IconeEquipe,
+  IconeEscudo,
+  IconeJardim,
+  IconeLimpeza,
+  IconeLocal,
+  IconeMonitor,
+  IconePortaria,
+  IconeRonda,
+  IconeSeta,
+  IconeTransparencia,
+  IconeVigia,
+  IconeWhatsapp,
+} from "@/components/icones";
+import {
+  EMPRESA_EMAIL,
+  EMPRESA_FUNDACAO,
+  JB_GESTAO_URL,
+  WHATSAPP_EXIBICAO,
+  WHATSAPP_LINK,
+} from "@/lib/empresa";
+
+const SERVICOS = [
+  {
+    Icone: IconePortaria,
+    titulo: "Portaria",
+    texto: "Controle de acesso e atendimento em postos diurnos, noturnos ou 24h, em escala 12x36.",
+  },
+  {
+    Icone: IconeRonda,
+    titulo: "Ronda patrimonial",
+    texto: "Rondas motorizadas com motocicleta própria da JB e apoio à portaria.",
+  },
+  {
+    Icone: IconeVigia,
+    titulo: "Vigia noturno",
+    texto: "Acompanhamento das dependências no período da noite, com cobertura de folgas.",
+  },
+  {
+    Icone: IconeMonitor,
+    titulo: "Monitoramento e áreas de lazer",
+    texto: "Monitores de videomonitoramento e de áreas de lazer, fixos ou por diária.",
+  },
+  {
+    Icone: IconeLimpeza,
+    titulo: "Limpeza e conservação",
+    texto: "Auxiliares de serviços gerais para manter as áreas comuns limpas e organizadas.",
+  },
+  {
+    Icone: IconeJardim,
+    titulo: "Jardinagem",
+    texto: "Cuidado contínuo dos jardins e das áreas verdes do condomínio.",
+  },
+];
+
+const DIFERENCIAIS = [
+  {
+    Icone: IconeEscudo,
+    titulo: "Segurança jurídica",
+    texto:
+      "A JB assume toda a responsabilidade trabalhista, previdenciária e fiscal. O condomínio não tem vínculo empregatício com os colaboradores.",
+  },
+  {
+    Icone: IconeDocumento,
+    titulo: "Tudo conforme a Convenção Coletiva",
+    texto: "Pisos, benefícios e adicionais seguem a CCT vigente dos condomínios do RN.",
+  },
+  {
+    Icone: IconeEquipe,
+    titulo: "Posto sempre coberto",
+    texto: "Folgas, férias e ausências já estão previstas no contrato.",
+  },
+  {
+    Icone: IconeTransparencia,
+    titulo: "Transparência nos custos",
+    texto: "Propostas com a composição de custos detalhada.",
+  },
+];
+
+const RECURSOS_JB_GESTAO = [
+  "Ocorrências e encomendas registradas pelo WhatsApp, com fotos e vídeos",
+  "Painel web para síndico e administração, com histórico e indicadores",
+  "Apoio de inteligência artificial nas consultas e nos resumos",
+  "Módulo operacional sem custo adicional para clientes JB Serviços",
+];
+
+const botaoPrincipal =
+  "inline-flex items-center justify-center gap-2 rounded-lg bg-jb-orange px-5 py-3 font-display text-sm font-bold text-white shadow-jb transition hover:bg-jb-orange-600";
+
+function TituloSecao({ rotulo, titulo, claro }: { rotulo: string; titulo: string; claro?: boolean }) {
+  return (
+    <div className="max-w-2xl">
+      <p className="text-xs font-semibold uppercase tracking-widest text-jb-orange">{rotulo}</p>
+      <h2 className={`mt-2 font-display text-3xl font-extrabold ${claro ? "text-white" : "text-jb-navy"}`}>
+        {titulo}
+      </h2>
+    </div>
+  );
+}
+
+export default function Inicio() {
+  return (
+    <main>
+      {/* Destaque */}
+      <section className="bg-white">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 md:grid-cols-[1.2fr_1fr] md:py-24">
+          <div>
+            <h1 className="font-display text-4xl font-extrabold leading-tight text-jb-navy sm:text-5xl">
+              Terceirização de serviços para condomínios em Natal e região
+            </h1>
+            <p className="mt-5 text-lg text-jb-ink-soft">
+              Portaria, ronda, limpeza e jardinagem com equipe registrada, treinada e supervisionada.
+              E, para os nossos clientes, o JB Gestão Condominial: tecnologia que dá mais
+              transparência à rotina do condomínio.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href={WHATSAPP_LINK} className={botaoPrincipal}>
+                <IconeWhatsapp className="h-5 w-5" />
+                Solicitar proposta
+              </a>
+              <a
+                href={JB_GESTAO_URL}
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-jb-navy px-5 py-3 font-display text-sm font-bold text-jb-navy transition hover:bg-jb-navy hover:text-white"
+              >
+                Acessar o JB Gestão
+                <IconeSeta className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+          <div className="hidden overflow-hidden rounded-2xl border border-jb-line bg-jb-ground shadow-jb md:block">
+            <div className="h-1.5 bg-gradient-to-r from-jb-navy via-jb-navy to-jb-orange" />
+            <div className="grid grid-cols-2 gap-4 p-8">
+              {SERVICOS.slice(0, 4).map(({ Icone, titulo }) => (
+                <div key={titulo} className="rounded-xl bg-white p-4 shadow-jb">
+                  <Icone className="h-7 w-7 text-jb-orange" />
+                  <p className="mt-3 font-display text-sm font-bold text-jb-navy">{titulo}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Serviços */}
+      <section id="servicos" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <TituloSecao rotulo="Serviços" titulo="Mão de obra completa para o seu condomínio" />
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {SERVICOS.map(({ Icone, titulo, texto }) => (
+            <article key={titulo} className="rounded-2xl border border-jb-line bg-white p-6 shadow-jb">
+              <div className="inline-flex rounded-xl bg-jb-orange-100 p-3 text-jb-orange-600">
+                <Icone />
+              </div>
+              <h3 className="mt-4 text-lg font-bold text-jb-navy">{titulo}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-jb-ink-soft">{texto}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Por que a JB */}
+      <section className="border-y border-jb-line bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+          <TituloSecao rotulo="Por que a JB" titulo="Seriedade em cada posto de trabalho" />
+          <div className="mt-10 grid gap-8 sm:grid-cols-2">
+            {DIFERENCIAIS.map(({ Icone, titulo, texto }) => (
+              <div key={titulo} className="flex gap-4">
+                <div className="h-fit rounded-xl bg-jb-navy-100 p-3 text-jb-navy">
+                  <Icone />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-jb-navy">{titulo}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-jb-ink-soft">{texto}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* JB Gestão Condominial */}
+      <section id="jb-gestao" className="bg-jb-navy">
+        <div className="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-2 md:items-center">
+          <div>
+            <TituloSecao rotulo="JB Gestão Condominial" titulo="Mais transparência. Mais controle. Mais confiança." claro />
+            <p className="mt-5 leading-relaxed text-white/80">
+              A plataforma própria da JB Serviços. Os porteiros registram ocorrências e encomendas
+              pelo WhatsApp, com fotos e vídeos. O síndico e a administração acompanham tudo pelo
+              painel web, com histórico, indicadores e apoio de inteligência artificial. Para os
+              clientes JB Serviços, o módulo operacional não tem custo adicional.
+            </p>
+            <a href={JB_GESTAO_URL} className={`${botaoPrincipal} mt-8`}>
+              Acessar o JB Gestão
+              <IconeSeta className="h-4 w-4" />
+            </a>
+          </div>
+          <ul className="space-y-3">
+            {RECURSOS_JB_GESTAO.map((r) => (
+              <li key={r} className="flex gap-3 rounded-xl bg-white/5 p-4 text-sm text-white/90 ring-1 ring-white/10">
+                <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-jb-orange" />
+                {r}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Sobre */}
+      <section id="sobre" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <div className="grid gap-10 md:grid-cols-[1fr_1.4fr] md:items-center">
+          <TituloSecao rotulo="Sobre" titulo="Uma empresa potiguar, perto de quem administra" />
+          <p className="text-lg leading-relaxed text-jb-ink-soft">
+            Fundada em {EMPRESA_FUNDACAO} em Natal/RN, a JB Serviços nasceu para oferecer aos
+            condomínios uma terceirização séria: gente bem preparada, obrigações em dia e
+            proximidade com síndicos e administradoras. Hoje unimos essa operação à tecnologia do JB
+            Gestão Condominial.
+          </p>
+        </div>
+      </section>
+
+      {/* Contato */}
+      <section id="contato" className="border-t border-jb-line bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+          <TituloSecao rotulo="Contato" titulo="Vamos conversar sobre o seu condomínio?" />
+          <p className="mt-3 max-w-2xl text-jb-ink-soft">
+            Fale com a gente e receba uma proposta sob medida para o seu condomínio.
+          </p>
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            <a
+              href={WHATSAPP_LINK}
+              className="group rounded-2xl border border-jb-line bg-jb-ground p-6 transition hover:border-jb-orange"
+            >
+              <IconeWhatsapp className="h-7 w-7 text-jb-orange" />
+              <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-jb-ink-soft">WhatsApp</p>
+              <p className="mt-1 font-display text-lg font-bold text-jb-navy group-hover:text-jb-orange-600">
+                {WHATSAPP_EXIBICAO}
+              </p>
+            </a>
+            <a
+              href={`mailto:${EMPRESA_EMAIL}`}
+              className="group rounded-2xl border border-jb-line bg-jb-ground p-6 transition hover:border-jb-orange"
+            >
+              <IconeEmail className="h-7 w-7 text-jb-orange" />
+              <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-jb-ink-soft">E-mail</p>
+              <p className="mt-1 break-all font-display text-lg font-bold text-jb-navy group-hover:text-jb-orange-600">
+                {EMPRESA_EMAIL}
+              </p>
+            </a>
+            <div className="rounded-2xl border border-jb-line bg-jb-ground p-6">
+              <IconeLocal className="h-7 w-7 text-jb-orange" />
+              <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-jb-ink-soft">Atendimento</p>
+              <p className="mt-1 font-display text-lg font-bold text-jb-navy">Natal/RN</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
