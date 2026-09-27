@@ -28,10 +28,26 @@ import {
 } from "@/components/ilustracoes";
 import { DEMONSTRACAO_EMAIL_LINK, JB_GESTAO_URL } from "@/lib/empresa";
 
+const descricao =
+  "A portaria registra pelo WhatsApp, o sistema organiza e o síndico acompanha tudo em tempo real: ocorrências, encomendas, agenda, relatórios e inteligência artificial.";
+
+// Prévia própria ao compartilhar o link (WhatsApp, redes sociais): título
+// "JB Gestão Condominial" em vez do da página inicial (pedido de 27/09/2026).
+// O openGraph da página substitui o do layout inteiro, por isso repete
+// siteName, locale e type.
 export const metadata: Metadata = {
   title: "Como funciona o JB Gestão Condominial — JB Serviços",
-  description:
-    "A portaria registra pelo WhatsApp, o sistema organiza e o síndico acompanha tudo em tempo real: ocorrências, encomendas, agenda, relatórios e inteligência artificial.",
+  description: descricao,
+  alternates: { canonical: "/jb-gestao" },
+  openGraph: {
+    title: "JB Gestão Condominial",
+    description: descricao,
+    url: "/jb-gestao",
+    siteName: "JB Serviços",
+    locale: "pt_BR",
+    type: "website",
+    images: [{ url: "/og-jb-gestao.jpg", width: 1200, height: 630, alt: "JB Gestão Condominial" }],
+  },
 };
 
 // Selo "Já em uso em um condomínio em Parnamirim/RN" desligado em 27/09/2026:
