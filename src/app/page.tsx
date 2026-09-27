@@ -15,7 +15,6 @@ import {
   IconeVigia,
 } from "@/components/icones";
 import {
-  EMPRESA_EMAIL,
   EMPRESA_FUNDACAO,
   JB_GESTAO_URL,
   PROPOSTA_EMAIL_LINK,
@@ -259,8 +258,9 @@ export default function Inicio() {
               <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-jb-ink-soft">
                 Solicite sua proposta
               </p>
-              <p className="mt-1 break-all font-display text-lg font-bold text-jb-navy group-hover:text-jb-orange-600">
-                {EMPRESA_EMAIL}
+              {/* O endereço não aparece na página: só no programa de e-mail, ao clicar. */}
+              <p className="mt-1 font-display text-lg font-bold text-jb-navy group-hover:text-jb-orange-600">
+                Enviar e-mail
               </p>
             </a>
             <div className="rounded-2xl border border-jb-line bg-jb-ground p-6">
