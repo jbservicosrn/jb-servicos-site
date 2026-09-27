@@ -23,8 +23,9 @@ export default function Rodape() {
         <div className="space-y-1">
           <p className="font-semibold text-white">Contato</p>
           <p>
-            <a href={`mailto:${EMPRESA_EMAIL}`} className="hover:text-white">
-              {EMPRESA_EMAIL}
+            {/* O endereço não aparece na página: só no programa de e-mail, ao clicar. */}
+            <a href={`mailto:${EMPRESA_EMAIL}`} className="underline-offset-2 hover:text-white hover:underline">
+              Enviar e-mail
             </a>
           </p>
         </div>
