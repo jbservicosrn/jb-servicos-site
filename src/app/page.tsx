@@ -1,4 +1,5 @@
 import {
+  IconeAutomacao,
   IconeDocumento,
   IconeEmail,
   IconeEquipe,
@@ -55,6 +56,14 @@ const SERVICOS = [
   },
 ];
 
+// Cartões ao lado do título: os três serviços principais + a tecnologia.
+const DESTAQUES = [
+  { Icone: IconePortaria, titulo: "Portaria", href: "#servicos" },
+  { Icone: IconeLimpeza, titulo: "Limpeza e conservação", href: "#servicos" },
+  { Icone: IconeJardim, titulo: "Jardinagem", href: "#servicos" },
+  { Icone: IconeAutomacao, titulo: "Gestão inteligente e automação", href: "#jb-gestao" },
+];
+
 const DIFERENCIAIS = [
   {
     Icone: IconeEscudo,
@@ -108,7 +117,7 @@ export default function Inicio() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 md:grid-cols-[1.2fr_1fr] md:py-24">
           <div>
             <h1 className="font-display text-4xl font-extrabold leading-tight text-jb-navy sm:text-5xl">
-              Terceirização de serviços para condomínios em Natal e região
+              Empresa de prestação de serviços terceirizados
             </h1>
             <p className="mt-5 text-lg text-jb-ink-soft">
               Portaria, ronda, limpeza e jardinagem com equipe registrada, treinada e supervisionada.
@@ -132,11 +141,15 @@ export default function Inicio() {
           <div className="hidden overflow-hidden rounded-2xl border border-jb-line bg-jb-ground shadow-jb md:block">
             <div className="h-1.5 bg-gradient-to-r from-jb-navy via-jb-navy to-jb-orange" />
             <div className="grid grid-cols-2 gap-4 p-8">
-              {SERVICOS.slice(0, 4).map(({ Icone, titulo }) => (
-                <div key={titulo} className="rounded-xl bg-white p-4 shadow-jb">
+              {DESTAQUES.map(({ Icone, titulo, href }) => (
+                <a
+                  key={titulo}
+                  href={href}
+                  className="rounded-xl bg-white p-4 shadow-jb ring-1 ring-transparent transition hover:ring-jb-orange"
+                >
                   <Icone className="h-7 w-7 text-jb-orange" />
                   <p className="mt-3 font-display text-sm font-bold text-jb-navy">{titulo}</p>
-                </div>
+                </a>
               ))}
             </div>
           </div>

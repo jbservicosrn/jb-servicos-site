@@ -84,6 +84,16 @@ export function IconeJardim(p: Props) {
   );
 }
 
+export function IconeAutomacao(p: Props) {
+  return (
+    <Svg {...p}>
+      <rect x="6" y="6" width="12" height="12" rx="2" />
+      <path d="M10 10h4v4h-4z" />
+      <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" />
+    </Svg>
+  );
+}
+
 export function IconeEscudo(p: Props) {
   return (
     <Svg {...p}>
