@@ -91,7 +91,7 @@ const RECURSOS_JB_GESTAO = [
   "Painel web para síndico e administração, com histórico e indicadores",
   "Apoio de inteligência artificial nas consultas e nos resumos",
   "Contratação à parte para condomínios de todo o Brasil",
-  "Módulo operacional sem custo adicional para clientes JB Serviços",
+  "Módulo operacional incluído para os condomínios com portaria JB",
 ];
 
 const botaoPrincipal =
@@ -200,9 +200,10 @@ export default function Inicio() {
             <p className="mt-5 leading-relaxed text-white/80">
               A plataforma própria da JB Serviços. Os porteiros registram ocorrências e encomendas
               pelo WhatsApp, com fotos e vídeos. O síndico e a administração acompanham tudo pelo
-              painel web, com histórico, indicadores e apoio de inteligência artificial. Pode ser
-              contratado à parte por condomínios de todo o Brasil, e para os clientes JB Serviços o
-              módulo operacional não tem custo adicional.
+              painel web, com histórico, indicadores e apoio de inteligência artificial. Para os
+              condomínios com portaria JB, o módulo operacional já vem incluído, porque é parte do
+              nosso padrão de excelência na portaria. Os demais condomínios, de todo o Brasil, podem
+              contratá-lo à parte.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href="/jb-gestao" className={botaoPrincipal}>

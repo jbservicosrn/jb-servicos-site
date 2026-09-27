@@ -138,7 +138,7 @@ const NIVEIS = [
     nome: "JB Gestão Operacional",
     disponivel: true,
     texto:
-      "Ocorrências, encomendas, agenda, moradores, relatórios, painel do síndico e Assistente JB. Sem custo adicional para clientes JB Serviços; para outros condomínios, sob consulta.",
+      "Ocorrências, encomendas, agenda, moradores, relatórios, painel do síndico e Assistente JB. Incluído para os condomínios com portaria JB Serviços; para os demais condomínios, sob consulta.",
   },
   {
     numero: "02",
@@ -165,7 +165,7 @@ const PERGUNTAS = [
   },
   {
     p: "O condomínio precisa ser cliente da JB Serviços?",
-    r: "Não. Clientes JB Serviços têm o módulo operacional sem custo adicional, mas qualquer condomínio pode contratar o sistema. Os valores são sob consulta, conforme o porte do condomínio.",
+    r: "Não. Qualquer condomínio pode contratar o sistema, com valores sob consulta conforme o porte. Para os condomínios com portaria JB Serviços, o módulo operacional já vem incluído: é a ferramenta que eleva o padrão de excelência do nosso serviço de portaria.",
   },
   {
     p: "Atende condomínios fora de Natal?",
