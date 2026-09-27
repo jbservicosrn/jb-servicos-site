@@ -34,6 +34,12 @@ export const metadata: Metadata = {
     "A portaria registra pelo WhatsApp, o sistema organiza e o síndico acompanha tudo em tempo real: ocorrências, encomendas, agenda, relatórios e inteligência artificial.",
 };
 
+// Selo "Já em uso em um condomínio em Parnamirim/RN" desligado em 27/09/2026:
+// o sistema está pronto e testado, mas aguarda a liberação do WhatsApp oficial
+// pela Meta (implantação prevista para a 2ª semana de outubro/2026). Voltar
+// para true quando estiver em uso de verdade.
+const MOSTRAR_SELO_EM_USO = false;
+
 const PROBLEMAS = [
   {
     Icone: IconeDocumento,
@@ -234,10 +240,12 @@ export default function ComoFunciona() {
               A portaria registra pelo WhatsApp. O sistema organiza sozinho. O síndico e a administração acompanham
               tudo em tempo real, com histórico, indicadores e inteligência artificial.
             </p>
-            <p className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm text-white ring-1 ring-white/15">
-              <span className="h-2 w-2 rounded-full bg-jb-ok" />
-              Já em uso em um condomínio em Parnamirim/RN
-            </p>
+            {MOSTRAR_SELO_EM_USO && (
+              <p className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm text-white ring-1 ring-white/15">
+                <span className="h-2 w-2 rounded-full bg-jb-ok" />
+                Já em uso em um condomínio em Parnamirim/RN
+              </p>
+            )}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href="#como-funciona" className={botaoPrincipal}>
                 Veja como funciona
