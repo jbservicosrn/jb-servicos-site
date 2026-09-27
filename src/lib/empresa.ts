@@ -12,6 +12,8 @@ export const EMPRESA_FUNDACAO = 2020;
 // automatizado para novos clientes.
 const PROPOSTA_ASSUNTO = "Solicitação de proposta — JB Serviços";
 export const PROPOSTA_EMAIL_LINK = `mailto:${EMPRESA_EMAIL}?subject=${encodeURIComponent(PROPOSTA_ASSUNTO)}`;
+const DEMONSTRACAO_ASSUNTO = "Demonstração do JB Gestão Condominial";
+export const DEMONSTRACAO_EMAIL_LINK = `mailto:${EMPRESA_EMAIL}?subject=${encodeURIComponent(DEMONSTRACAO_ASSUNTO)}`;
 
 export const JB_GESTAO_URL = "https://jb-gestao-cond.jbservicosrn.com.br";
 export const SITE_URL = "https://jbservicosrn.com.br";

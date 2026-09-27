@@ -32,6 +32,11 @@ export default function Rodape() {
         <div className="space-y-1">
           <p className="font-semibold text-white">Links</p>
           <p>
+            <a href="/jb-gestao" className="hover:text-white">
+              Como funciona o JB Gestão
+            </a>
+          </p>
+          <p>
             <a href={JB_GESTAO_URL} className="hover:text-white">
               Acessar o JB Gestão
             </a>

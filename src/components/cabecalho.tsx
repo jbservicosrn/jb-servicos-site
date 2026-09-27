@@ -6,7 +6,7 @@ import { JB_GESTAO_URL } from "@/lib/empresa";
 
 const LINKS = [
   { href: "/#servicos", rotulo: "Serviços" },
-  { href: "/#jb-gestao", rotulo: "JB Gestão" },
+  { href: "/jb-gestao", rotulo: "JB Gestão" },
   { href: "/#sobre", rotulo: "Sobre" },
   { href: "/#contato", rotulo: "Contato" },
 ];

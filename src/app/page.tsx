@@ -59,7 +59,7 @@ const DESTAQUES = [
   { Icone: IconePortaria, titulo: "Portaria", href: "#servicos" },
   { Icone: IconeLimpeza, titulo: "Limpeza e conservação", href: "#servicos" },
   { Icone: IconeJardim, titulo: "Jardinagem", href: "#servicos" },
-  { Icone: IconeAutomacao, titulo: "Gestão inteligente e automação", href: "#jb-gestao" },
+  { Icone: IconeAutomacao, titulo: "Gestão inteligente e automação", href: "/jb-gestao" },
 ];
 
 const DIFERENCIAIS = [
@@ -201,10 +201,18 @@ export default function Inicio() {
               painel web, com histórico, indicadores e apoio de inteligência artificial. Para os
               clientes JB Serviços, o módulo operacional não tem custo adicional.
             </p>
-            <a href={JB_GESTAO_URL} className={`${botaoPrincipal} mt-8`}>
-              Acessar o JB Gestão
-              <IconeSeta className="h-4 w-4" />
-            </a>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="/jb-gestao" className={botaoPrincipal}>
+                Conheça como funciona
+                <IconeSeta className="h-4 w-4" />
+              </a>
+              <a
+                href={JB_GESTAO_URL}
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/40 px-5 py-3 font-display text-sm font-bold text-white transition hover:bg-white hover:text-jb-navy"
+              >
+                Acessar o JB Gestão
+              </a>
+            </div>
           </div>
           <ul className="space-y-3">
             {RECURSOS_JB_GESTAO.map((r) => (

@@ -184,3 +184,97 @@ export function IconeFechar(p: Props) {
     </Svg>
   );
 }
+
+export function IconeCaixa(p: Props) {
+  return (
+    <Svg {...p}>
+      <path d="M21 8 12 3 3 8v8l9 5 9-5V8Z" />
+      <path d="M3 8l9 5 9-5" />
+      <path d="M12 13v8" />
+    </Svg>
+  );
+}
+
+export function IconeCalendario(p: Props) {
+  return (
+    <Svg {...p}>
+      <rect x="3" y="5" width="18" height="16" rx="2" />
+      <path d="M3 10h18M8 3v4M16 3v4" />
+      <path d="M8 14h3v3H8z" />
+    </Svg>
+  );
+}
+
+export function IconeGrafico(p: Props) {
+  return (
+    <Svg {...p}>
+      <path d="M3 3v18h18" />
+      <path d="M8 17v-5M13 17V8M18 17v-8" />
+    </Svg>
+  );
+}
+
+export function IconeIA(p: Props) {
+  return (
+    <Svg {...p}>
+      <path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8L12 3Z" />
+      <path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z" />
+    </Svg>
+  );
+}
+
+export function IconeCadeado(p: Props) {
+  return (
+    <Svg {...p}>
+      <rect x="4" y="10" width="16" height="11" rx="2" />
+      <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+      <path d="M12 15v2" />
+    </Svg>
+  );
+}
+
+export function IconeRelogio(p: Props) {
+  return (
+    <Svg {...p}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </Svg>
+  );
+}
+
+export function IconeNuvem(p: Props) {
+  return (
+    <Svg {...p}>
+      <path d="M7 18a5 5 0 0 1-.5-10A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7Z" />
+      <path d="m9.5 13 2 2 3.5-3.5" />
+    </Svg>
+  );
+}
+
+export function IconeAlerta(p: Props) {
+  return (
+    <Svg {...p}>
+      <path d="M10.3 4 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 4a2 2 0 0 0-3.4 0Z" />
+      <path d="M12 10v4M12 17.5h.01" />
+    </Svg>
+  );
+}
+
+export function IconeConversa(p: Props) {
+  return (
+    <Svg {...p}>
+      <path d="M4 5h16v11H9l-5 4V5Z" />
+      <path d="M8 9.5h8M8 12.5h5" />
+    </Svg>
+  );
+}
+
+export function IconePredio(p: Props) {
+  return (
+    <Svg {...p}>
+      <rect x="5" y="3" width="14" height="18" rx="1" />
+      <path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2" />
+      <path d="M10.5 21v-3h3v3" />
+    </Svg>
+  );
+}
