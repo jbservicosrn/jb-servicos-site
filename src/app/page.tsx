@@ -120,8 +120,9 @@ export default function Inicio() {
             </h1>
             <p className="mt-5 text-lg text-jb-ink-soft">
               Portaria, ronda, limpeza e jardinagem com equipe registrada, treinada e supervisionada.
-              E o JB Gestão Condominial, nossa plataforma de gestão inteligente, que dá mais
-              transparência à rotina de qualquer condomínio, cliente JB ou não.
+              E o JB Gestão Condominial, nossa plataforma de gestão inteligente: já incluída para os
+              condomínios com portaria JB e disponível para contratação à parte por qualquer
+              condomínio.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href={PROPOSTA_EMAIL_LINK} className={botaoPrincipal}>
