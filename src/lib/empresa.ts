@@ -1,7 +1,7 @@
 // Dados da empresa exibidos no site. Um lugar só, pra atualizar sem caçar
 // texto nas páginas.
 export const EMPRESA_NOME = "JB Serviços";
-export const EMPRESA_RAZAO_SOCIAL = "José Ivanildo Vicente Barbosa LTDA";
+// Razão social omitida no site por enquanto (pedido de 27/09/2026): será alterada.
 export const EMPRESA_CNPJ = "36.878.025/0001-30";
 export const EMPRESA_EMAIL = "jbservicosrn@gmail.com";
 export const EMPRESA_CIDADE = "Natal/RN";

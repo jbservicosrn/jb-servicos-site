@@ -3,7 +3,6 @@ import {
   EMPRESA_CNPJ,
   EMPRESA_EMAIL,
   EMPRESA_NOME,
-  EMPRESA_RAZAO_SOCIAL,
   JB_GESTAO_URL,
 } from "@/lib/empresa";
 
@@ -50,7 +49,7 @@ export default function Rodape() {
       </div>
       <div className="border-t border-white/10">
         <p className="mx-auto max-w-6xl px-4 py-5 text-xs sm:px-6">
-          © {new Date().getFullYear()} {EMPRESA_NOME} · {EMPRESA_RAZAO_SOCIAL} · CNPJ {EMPRESA_CNPJ}
+          © {new Date().getFullYear()} {EMPRESA_NOME} · CNPJ {EMPRESA_CNPJ}
         </p>
       </div>
     </footer>

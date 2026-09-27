@@ -3,7 +3,6 @@ import {
   EMPRESA_CNPJ,
   EMPRESA_EMAIL,
   EMPRESA_NOME,
-  EMPRESA_RAZAO_SOCIAL,
   JB_GESTAO_URL,
 } from "@/lib/empresa";
 
@@ -23,8 +22,7 @@ export default function Privacidade() {
 
       <div className="mt-8 space-y-6 leading-relaxed text-jb-ink [&_h2]:mt-10 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-jb-navy">
         <p>
-          Esta política vale para o site institucional da {EMPRESA_NOME} ({EMPRESA_RAZAO_SOCIAL},
-          CNPJ {EMPRESA_CNPJ}) e segue a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).
+          Esta política vale para o site institucional da {EMPRESA_NOME} (CNPJ {EMPRESA_CNPJ}) e segue a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).
         </p>
 
         <h2>1. Quais dados coletamos</h2>
