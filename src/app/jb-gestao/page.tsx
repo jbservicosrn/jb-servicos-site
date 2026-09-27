@@ -247,7 +247,7 @@ export default function ComoFunciona() {
               </p>
             )}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href="#como-funciona" className={botaoPrincipal}>
+              <a href="#video" className={botaoPrincipal}>
                 Veja como funciona
                 <IconeSeta className="h-4 w-4 rotate-90" />
               </a>
@@ -263,7 +263,7 @@ export default function ComoFunciona() {
           <PainelInicio />
         </div>
         <a
-          href="#como-funciona"
+          href="#video"
           className="flex flex-col items-center gap-1 pb-5 text-xs font-semibold uppercase tracking-widest text-white/60 transition hover:text-white"
         >
           Role para conhecer o sistema
@@ -275,7 +275,7 @@ export default function ComoFunciona() {
 
       {/* Vídeo demonstrativo — gravado em 27/09/2026 no painel real, com o
           "Condomínio Demonstração" (dados 100% fictícios). */}
-      <section className="border-b border-jb-line bg-white">
+      <section id="video" className="border-b border-jb-line bg-white">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
           <div className="text-center">
             <p className="text-xs font-semibold uppercase tracking-widest text-jb-orange">Demonstração</p>
