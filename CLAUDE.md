@@ -41,9 +41,12 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
 - **Sem WhatsApp no site** por enquanto: propostas e demonstrações só por
   e-mail. O número (84) 99638-5174 está anotado em `empresa.ts`, fora do site,
   até existir atendimento automatizado.
-- **O endereço de e-mail não aparece escrito na página**: os botões dizem
-  "Enviar e-mail" e abrem o programa de e-mail com assunto e um roteiro para o
-  cliente completar (`linkEmail` em `empresa.ts`).
+- **O endereço de e-mail não aparece escrito na página** (cartão "Solicite sua
+  proposta" e rodapé): os botões dizem "Enviar e-mail" e abrem o programa de
+  e-mail com assunto e um roteiro para o cliente completar (`linkEmail` em
+  `empresa.ts`: um roteiro para proposta, outro para demonstração). Exceção:
+  a Política de Privacidade mantém o e-mail escrito (a LGPD pede um canal de
+  contato claro).
 - **Sem razão social** em nenhum lugar (vai mudar). Rodapé mostra só nome e CNPJ.
 - **Nenhum cliente citado** pelo nome (nem o Montreal).
 - Endereço: só "Natal/RN". Serviços presenciais: Natal e região metropolitana.
@@ -67,9 +70,45 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
 
 ## Vídeo e demonstração
 
-- Vídeo "JB Gestão em 2 minutos" (`public/jb-gestao-em-2-minutos.mp4` + capa),
-  gravado em 27/09/2026 no painel real com o **Condomínio Demonstração**
-  (dados fictícios) e o login "Síndico(a) Demonstração". Os dois ficam
-  guardados para acessos demonstrativos de futuros clientes. Pedido original:
+- Vídeo "Veja o JB Gestão em 2 minutos" (`public/jb-gestao-em-2-minutos.mp4` +
+  `-capa.jpg`, ~2 min, H.264, sem som), gravado em 27/09/2026 no painel real com
+  o **Condomínio Demonstração** (dados fictícios, `condominios.id = 5` no
+  Supabase) e o login `demonstracao` (perfil Síndico, só nesse condomínio; a
+  senha fica com o dono, nunca no repositório). Os dois ficam guardados para
+  acessos demonstrativos de futuros clientes. Pedido original:
   `docs/pedido-video-demonstracao.md`.
-- `/jb-gestao` tem prévia própria ao compartilhar o link (`public/og-jb-gestao.jpg`).
+- Fica numa seção logo abaixo do topo de `/jb-gestao` (`id="video"`); o botão
+  "Veja como funciona" e a seta "Role para conhecer o sistema" levam até ele.
+  Carrega só ao dar play (`preload="none"`).
+- Decisões do dono sobre o vídeo:
+  - **Mandar para aprovação antes de publicar** qualquer versão nova.
+  - **Ritmo:** o de "0,75×" da primeira versão (pausas longas para dar tempo de
+    ler legendas e telas); digitação e cursor em ritmo natural. A primeira
+    versão (84 s) foi achada rápida demais.
+  - Legendas curtas em cada cena, sem narração e sem música.
+  - Roteiro: Início → ocorrência (foto, prazo, Sugestão da IA) → encomenda
+    (registro com foto → retirada → **foto do protocolo assinado pelo
+    morador**, anexada como comprovante) → agenda (recorrência, custo previsto
+    × realizado, calendário) → relatórios + análise da IA → Assistente IA →
+    animação do WhatsApp (visual de `ilustracoes.tsx`, com o selo "WhatsApp
+    oficial em implantação") → tela final.
+  - Tela final: "Incluso para condomínios com portaria da JB Serviços" +
+    "✓ Também disponível para contratação avulsa por qualquer condomínio" +
+    "Solicite uma demonstração".
+  - Fotos do vídeo (vazamento, caixa, protocolo) são ilustrações geradas,
+    nunca fotos reais.
+- Ao trocar o arquivo do vídeo mantendo o nome, suba o `?v=N` no endereço
+  dele em `jb-gestao/page.tsx` (hoje `?v=2`), senão o navegador de quem já
+  visitou mostra a versão antiga.
+- Os scripts de gravação (Playwright + ffmpeg) ficaram fora do repositório.
+  Numa regravação: cada gravação registra mais uma encomenda fictícia no
+  condomínio 5 (apagar a duplicada depois; o comprovante de retirada não pode
+  ser trocado); apagar `relatorios_ia` do condomínio 5 antes, para a análise
+  da IA ser gerada na hora; conferir quadro a quadro que só aparecem dados
+  fictícios. O Chromium desta sessão não toca H.264 — confirmar o play num
+  navegador de verdade.
+- `/jb-gestao` tem prévia própria ao compartilhar o link (WhatsApp/redes):
+  título "JB Gestão Condominial", descrição da página e imagem
+  `public/og-jb-gestao.jpg` (1200×630). O link raiz continua com a prévia
+  "JB Serviços". O `openGraph` de uma página substitui o do layout inteiro, por
+  isso repete `siteName`, `locale` e `type`.
