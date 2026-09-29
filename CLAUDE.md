@@ -122,6 +122,51 @@ Domains) e copiar o valor que ela mostrar para uma entrada nova no Registro.br.
     o domínio novo). O dono recebeu um pedido pronto para colar numa sessão
     do painel.
 
+## Preços e condições do JB Gestão (definidos em 28–29/09/2026)
+
+Para condomínios **sem** portaria JB (os com portaria JB seguem com o sistema
+incluído). O site continua dizendo "sob consulta": só trocar para
+"a partir de R$ 290/mês" quando o dono pedir.
+
+| Porte | Mensal | Anual parcelado (−10%) | Anual à vista (−15%) |
+|---|---|---|---|
+| Até 40 unidades | R$ 290 | R$ 261/mês | R$ 2.958 |
+| 41 a 100 | R$ 390 | R$ 351/mês | R$ 3.978 |
+| 101 a 200 | R$ 590 | R$ 531/mês | R$ 6.018 |
+| 201 a 350 | R$ 790 | R$ 711/mês | R$ 8.058 |
+| 351 a 500 | R$ 990 | R$ 891/mês | R$ 10.098 |
+| 501 a 700 | R$ 1.290 | R$ 1.161/mês | R$ 13.158 |
+| 701 a 1.000 | R$ 1.690 | R$ 1.521/mês | R$ 17.238 |
+| Acima de 1.000 | sob consulta | — | — |
+
+- **Implantação** (uma vez, 1 a 3 dias): R$ 990 (até 100 un.), R$ 1.490
+  (101–350), R$ 1.990 (acima de 350). 50% de desconto no plano anual; paga com
+  a 1ª mensalidade ou em 2x. Não é devolvida depois de concluída.
+- **Lançamento**: primeiros 10 condomínios com 20% de desconto por 12 meses,
+  não cumulativo com os descontos do plano anual.
+- **Pagamento**: boleto ou Pix, vencimento dia 10; nota fiscal a cada
+  pagamento; contrato no CNPJ do condomínio (troca de síndico não altera).
+- **Reajuste** anual pelo IPCA; plano anual renova sozinho por 12 meses, salvo
+  aviso de 30 dias.
+- **Cancelamento**: mensal sem multa, com aviso de 30 dias. Anual parcelado:
+  devolve o desconto já recebido. Anual à vista: devolvemos os meses não
+  usados, descontada a diferença dos meses usados (pelo preço mensal). Sem
+  multa se houver falha grave não resolvida em 10 dias após o aviso.
+- **Atraso**: multa 2% + juros 1% ao mês; acesso suspenso a partir de 30 dias
+  (dados preservados); contrato pode ser encerrado a partir de 60 dias.
+- **Dados após cancelar**: 30 dias para exportar, depois apagados (LGPD).
+- Documento para clientes: "JB Gestão — Planos, preços e condições
+  comerciais" (PDF + Word). A planilha interna de custos e margens
+  (`precificacao-jb-gestao.xlsx`) fica com o dono, **fora do repositório**:
+  nunca publicar custos nem margens.
+- Pendências do dono: contrato revisado por advogado; confirmar imposto e nota
+  fiscal de software com o contador; trocar as estimativas da planilha pelos
+  valores reais das faturas e do 1º mês do piloto.
+- Antes de vender para fora (tratar no repositório do painel): Vercel do
+  painel sair do Hobby (não permite uso comercial) para o Pro; Supabase Free →
+  Pro (fotos de encomendas enchem 1 GB); conferir se o plano do n8n aguenta o
+  "03 Processador" rodando a cada minuto (~43 mil execuções/mês).
+
 ## Sessões na nuvem (Claude Code)
 
 - A rede do ambiente é limitada. Para uma sessão acessar o painel ou o banco,
