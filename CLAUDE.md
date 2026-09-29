@@ -73,6 +73,70 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   guardados para acessos demonstrativos de futuros clientes. Pedido original:
   `docs/pedido-video-demonstracao.md`.
 - `/jb-gestao` tem prévia própria ao compartilhar o link (`public/og-jb-gestao.jpg`).
+- Antes de o selo voltar: o login de demonstração teve um acesso pelo celular em
+  28/09/2026 14:20 que o dono ainda não confirmou se foi dele. Se não foi,
+  trocar a senha desse login.
+
+## Visitas do site (Vercel Web Analytics)
+
+- Ativado em 29/09/2026: componente `<Analytics />` em `src/app/layout.tsx`
+  (pacote `@vercel/analytics`) + aba Analytics ligada no projeto da Vercel.
+  Contagem anônima, sem cookies; a política de privacidade já avisa.
+- Não há dados de visitas antes dessa data (o site não contava nada antes).
+- Para consultar: Vercel → projeto `jb-servicos-site` → Analytics → quadro
+  "Pages" (ex.: `/jb-gestao`) e "Referrers" (de onde vieram). Não há acesso a
+  esses números por aqui: peça um print ao dono.
+
+## Domínio e DNS (Registro.br, modo avançado)
+
+Zona `jbservicosrn.com.br` usa o DNS do Registro.br. Entradas:
+- `TXT` na raiz: verificação da empresa na Meta (`facebook-domain-verification`).
+  **Nunca apagar** — o WhatsApp oficial do JB Gestão depende dela.
+- `A` na raiz e `CNAME www` → Vercel (projeto do site). A raiz redireciona (308)
+  para `www`.
+- `CNAME jb-gestao-cond` → Vercel (projeto do painel).
+Novos subdomínios: adicionar o domínio no projeto certo da Vercel (Settings →
+Domains) e copiar o valor que ela mostrar para uma entrada nova no Registro.br.
+
+## Painel JB Gestão — o que foi feito a partir daqui (27–29/09/2026)
+
+- Domínio próprio `jb-gestao-cond.jbservicosrn.com.br` ligado ao projeto do
+  painel na Vercel; variável `NEXT_PUBLIC_SITE_URL` criada (tipo Config) com
+  esse endereço e redeploy feito; Supabase → Authentication → URL
+  Configuration com Site URL e Redirect URL do domínio novo (o `.vercel.app`
+  continua funcionando). Testado pelo dono: links de senha saem com o domínio novo.
+- Banco (Supabase) do painel: projeto `jb-gestao-cond`, id
+  `ieccmoscedqdexogytkv`.
+- Logins: o sistema só guarda o **último login** de cada usuário
+  (`auth.users.last_sign_in_at`) e as sessões abertas (`auth.sessions`); o
+  registro de auditoria do Supabase está vazio, então **não existe histórico
+  completo de acessos**. Se o dono quiser isso, é funcionalidade nova, a pedir
+  no repositório do painel.
+- Pendências do painel (tratar lá, não aqui):
+  - Desativar os 5 usuários "Teste…" ainda ativos no Montreal antes do piloto.
+  - Razão social: ainda aparece nas páginas legais do painel (Política,
+    Termos, Exclusão de Dados). Trocar só quando a razão social nova estiver
+    registrada, igual ao cadastro da Meta Business.
+  - Reorganizar a documentação para gastar menos tokens (dividir o roteiro em
+    atual + histórico, regra de não ler os documentos inteiros, CLAUDE.md com
+    o domínio novo). O dono recebeu um pedido pronto para colar numa sessão
+    do painel.
+
+## Sessões na nuvem (Claude Code)
+
+- A rede do ambiente é limitada. Para uma sessão acessar o painel ou o banco,
+  o dono libera em Ambiente → Editar → Acesso à rede → Personalizado os
+  domínios `jb-gestao-cond.jbservicosrn.com.br`,
+  `ieccmoscedqdexogytkv.supabase.co`, `fonts.googleapis.com` e
+  `fonts.gstatic.com`. Mudanças no ambiente só valem para sessões novas.
+- Nunca pedir senhas no chat nem em variáveis de ambiente.
+
+## Economia de tokens (combinado com o dono)
+
+- Uma conversa por assunto; `/clear` ao terminar uma tarefa (as decisões ficam
+  aqui no CLAUDE.md), `/compact` no meio de tarefas longas, `/resume` só quando
+  precisar de uma conversa antiga.
+- Ao fim de conversas com decisões importantes, registrar neste arquivo.
 
 ## Projeto em andamento: integração Superlógica → Intelbras (InControl)
 
