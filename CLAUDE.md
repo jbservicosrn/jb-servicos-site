@@ -112,9 +112,12 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   `public/og-jb-gestao.jpg` (1200×630). O link raiz continua com a prévia
   "JB Serviços". O `openGraph` de uma página substitui o do layout inteiro, por
   isso repete `siteName`, `locale` e `type`.
-- Antes de o selo voltar: o login de demonstração teve um acesso pelo celular em
-  28/09/2026 14:20 que o dono ainda não confirmou se foi dele. Se não foi,
-  trocar a senha desse login.
+- O dono **passou a senha do login de demonstração a clientes** (29/09/2026) e
+  quer acompanhar os acessos. Todos usam o mesmo login, então só dá para
+  distinguir pelas sessões (`auth.sessions` do usuário "Síndico(a)
+  Demonstração": data, aparelho/navegador pelo user_agent, IP). Sessões com
+  user_agent "node" ou "Vercel Edge Functions" são scripts/automação, não
+  clientes. O acesso Android de 28/09 14:20 foi de cliente.
 
 ## Visitas do site (Vercel Web Analytics)
 
