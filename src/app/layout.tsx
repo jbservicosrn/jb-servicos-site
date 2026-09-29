@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import Cabecalho from "@/components/cabecalho";
 import Rodape from "@/components/rodape";
 import { SITE_URL } from "@/lib/empresa";
@@ -33,6 +34,8 @@ export default function RootLayout({
         <Cabecalho />
         {children}
         <Rodape />
+        {/* Contagem anônima de visitas (Vercel Web Analytics, sem cookies). */}
+        <Analytics />
       </body>
     </html>
   );

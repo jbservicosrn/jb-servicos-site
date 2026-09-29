@@ -8,7 +8,7 @@ import {
 
 // Política do site institucional apenas. O painel JB Gestão Condominial tem
 // política própria (JB_GESTAO_URL/privacidade), que trata dos dados do sistema.
-const ATUALIZADA_EM = "27/09/2026";
+const ATUALIZADA_EM = "29/09/2026";
 
 export const metadata: Metadata = {
   title: "Política de Privacidade — JB Serviços",
@@ -43,6 +43,11 @@ export default function Privacidade() {
           As fontes do site são carregadas do Google Fonts, e o site é hospedado na Vercel. Esses
           serviços podem registrar dados técnicos de acesso (como endereço IP e navegador),
           conforme as políticas de privacidade deles.
+        </p>
+        <p>
+          Para saber quantas pessoas visitam cada página, usamos o Vercel Web Analytics, que conta
+          as visitas de forma anônima e agregada (página, origem do acesso, tipo de aparelho e
+          país), sem cookies e sem identificar quem visitou.
         </p>
 
         <h2>4. JB Gestão Condominial</h2>
