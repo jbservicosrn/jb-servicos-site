@@ -73,3 +73,48 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   guardados para acessos demonstrativos de futuros clientes. Pedido original:
   `docs/pedido-video-demonstracao.md`.
 - `/jb-gestao` tem prévia própria ao compartilhar o link (`public/og-jb-gestao.jpg`).
+
+## Projeto em andamento: integração Superlógica → Intelbras (InControl)
+
+Discutido em 28–29/09/2026. **Não é código deste site**: vai para o painel
+(`jb-gestao-painel-web`) e para um repositório novo do agente. Anotado aqui
+para não se perder.
+
+**Problema:** no condomínio com contrato, a administração cadastra o morador
+na Superlógica e a portaria redigita tudo no InControl Web (Intelbras) para o
+cadastro facial. Objetivo: dados digitados **uma vez só**, na Superlógica; a
+portaria só tira a foto no 1º acesso.
+
+Decisões:
+
+- **O InControl continua sendo o dono dos leitores.** Gravar no InControl
+  (pela API dele), nunca direto nos leitores, senão o InControl sobrescreve.
+  Substituir o InControl por sistema próprio fica para depois (etapa 3), se
+  um dia.
+- **Arquitetura:** Superlógica → JB Gestão (nuvem) → agente Windows no PC do
+  condomínio → InControl → leitores.
+  - **Agente Windows** no PC que já existe lá só para o InControl: roda como
+    serviço, sem tela, só conexões de saída (sem abrir porta no roteador).
+  - **Aba "Integrações" no JB Gestão**: chaves da Superlógica (não ficam no
+    PC), status do agente, histórico, botão "Sincronizar agora".
+  - Ordem: primeiro o agente (testado neste condomínio), depois a aba.
+- **Sincronização por demanda:** webhook da Superlógica se a versão
+  Condomínios oferecer gatilho de novo morador (a confirmar); senão, consulta
+  a cada 1–2 min. O agente fica conectado ao JB Gestão e recebe na hora.
+  Conferência completa diária de madrugada.
+- **Fonte da verdade = Superlógica.** A portaria não cria morador no
+  InControl, só adiciona a foto. Visitantes e prestadores seguem cadastrados
+  na portaria. Morador desativado na Superlógica → desativado no InControl.
+- **Acesso à Superlógica:** a conta é do condomínio (contratou direto). A
+  síndica autoriza; ideal é um login só de consulta para a JB. Tokens em
+  Superlógica: Todos os usuários → API (Integração com outros sistemas) →
+  Aplicativos → Novo App Token. Plano B sem API: planilha exportada.
+- **LGPD:** biometria facial é dado sensível. Termo de autorização assinado
+  pela síndica (condomínio = controlador, JB = operador) e consentimento do
+  morador.
+- Pode virar recurso do JB Gestão para outros condomínios com portaria JB.
+
+Pendências: resposta da síndica (dono falou por WhatsApp); modelo dos leitores
+e versão do InControl (conferir por acesso remoto ao PC); documentação da API
+do InControl Web (pedir ao suporte Intelbras ou instalador); confirmar webhook
+de novo morador na Superlógica Condomínios.
