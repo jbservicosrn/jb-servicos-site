@@ -93,13 +93,13 @@ const MODULOS = [
     Icone: IconeCaixa,
     titulo: "Encomendas",
     texto:
-      "A IA lê a foto da etiqueta e preenche tudo. O morador é avisado pelo WhatsApp e a portaria vê se o aviso foi entregue e lido. Encomenda repetida é barrada, e a retirada fica com a assinatura do morador.",
+      "A IA lê a foto da etiqueta e preenche tudo. O morador é avisado pelo WhatsApp e a portaria vê se o aviso foi entregue e lido. Encomenda repetida é barrada. Na retirada, o morador assina com o dedo no celular da portaria ou no protocolo de papel.",
   },
   {
     Icone: IconeChave,
     titulo: "Itens de uso",
     texto:
-      "Tacos, bolas, grelhas e chaves emprestados com prazo de devolução e assinatura de quem retira. Atrasou, fica em vermelho e avisa; avaria vira ocorrência com um clique.",
+      "Tacos, bolas, grelhas e chaves emprestados com prazo de devolução e assinatura de quem retira, com o dedo na tela do celular. Atrasou, fica em vermelho e avisa; avaria vira ocorrência com um clique.",
   },
   {
     Icone: IconeCalendario,
@@ -386,7 +386,7 @@ export default function ComoFunciona() {
             <Passo
               numero="3"
               titulo="A encomenda chega e o morador é avisado na hora"
-              texto="O porteiro fotografa a etiqueta e manda pelo WhatsApp (ou registra pelo painel). A inteligência artificial lê destinatário, unidade, remetente e rastreio, confere com ele e registra — encomenda repetida é barrada. O morador recebe o aviso pelo WhatsApp e a portaria vê se ele foi entregue e lido. Na retirada, o morador assina na tela ou no protocolo, e fica tudo registrado."
+              texto="O porteiro fotografa a etiqueta e manda pelo WhatsApp (ou registra pelo painel). A inteligência artificial lê destinatário, unidade, remetente e rastreio, confere com ele e registra — encomenda repetida é barrada. O morador recebe o aviso pelo WhatsApp e a portaria vê se ele foi entregue e lido. Na retirada, o morador assina com o dedo na tela do celular da portaria ou no protocolo de papel, e fica tudo registrado."
               ilustracao={
                 <div className="grid gap-6 sm:grid-cols-2">
                   <ConversaEncomenda />
