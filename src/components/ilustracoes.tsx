@@ -58,23 +58,20 @@ export function ConversaEncomenda() {
   return (
     <Celular titulo="JB Gestão Condominial" subtitulo="Portaria · Turno diurno">
       <Balao de="porteiro">
-        <div className="mb-1.5 flex h-20 items-center justify-center rounded-lg bg-jb-navy-100 text-[11px] text-jb-ink-soft">
-          📷 foto da encomenda
+        <div className="flex h-20 items-center justify-center rounded-lg bg-jb-navy-100 text-[11px] text-jb-ink-soft">
+          📷 foto da etiqueta
         </div>
-        Chegou encomenda pro bloco B, apto 302
       </Balao>
       <Balao de="sistema">
-        📦 Encomenda registrada
+        📦 Li a etiqueta: <strong>Ana Souza</strong> · Bloco B · Apto 302 · Loja Exemplo
         <br />
-        <strong className="font-mono text-[12px]">EN-20261002-0031</strong>
-        <br />
-        Bloco B · Apto 302 · foto anexada
-        <br />✅ Morador avisado pelo WhatsApp
+        <strong>1</strong> Sim, registrar · <strong>2</strong> Corrigir · <strong>0</strong> Cancelar
       </Balao>
-      <Balao de="porteiro">Moradora do 302 retirou agora</Balao>
+      <Balao de="porteiro">1</Balao>
       <Balao de="sistema">
-        ✅ Retirada registrada às 18:42. Encomenda <strong className="font-mono text-[12px]">EN-20261002-0031</strong>{" "}
-        entregue.
+        ✅ Encomenda registrada <strong className="font-mono text-[12px]">EN-20261002-0031</strong>
+        <br />
+        📲 Aviso enviado para Ana Souza (destinatária)
       </Balao>
     </Celular>
   );

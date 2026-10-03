@@ -86,9 +86,9 @@ const DIFERENCIAIS = [
 ];
 
 const RECURSOS_JB_GESTAO = [
-  "Ocorrências e encomendas registradas pelo WhatsApp, com fotos e vídeos",
-  "Painel web para síndico e administração, com histórico e indicadores",
-  "Apoio de inteligência artificial nas consultas e nos resumos",
+  "Ocorrências e encomendas registradas pelo WhatsApp, com fotos — a IA lê até a etiqueta da encomenda",
+  "Itens de uso, agenda com orçamentos, obras e moradores no mesmo painel",
+  "Relatório de Gestão em PDF e Assistente de IA para o síndico e a administração",
   "Contratação à parte para condomínios de todo o Brasil",
   "Módulo operacional incluído para os condomínios com portaria JB",
 ];

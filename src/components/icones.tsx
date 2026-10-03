@@ -278,3 +278,32 @@ export function IconePredio(p: Props) {
     </Svg>
   );
 }
+
+export function IconeChave(p: Props) {
+  return (
+    <Svg {...p}>
+      <circle cx="8" cy="15" r="4" />
+      <path d="M10.8 12.2 20 3M16 7l2.5 2.5M18.5 4.5 21 7" />
+    </Svg>
+  );
+}
+
+export function IconeOrcamento(p: Props) {
+  return (
+    <Svg {...p}>
+      <path d="M6 3h9l4 4v14H6V3Z" />
+      <path d="M15 3v4h4" />
+      <path d="M12.5 10.5c-.6-.5-1.3-.7-2-.6-1 .2-1.5.9-1.3 1.6.3 1.3 3.6.9 3.7 2.6 0 .8-.7 1.4-1.8 1.4-.8 0-1.5-.3-2-.8M10.8 9v.9M10.8 15.5v.9" />
+    </Svg>
+  );
+}
+
+export function IconeObra(p: Props) {
+  return (
+    <Svg {...p}>
+      <path d="M5 15v-1a7 7 0 0 1 14 0v1" />
+      <path d="M10 7.5V5h4v2.5M10 12V7.5M14 12V7.5" />
+      <path d="M2.5 15h19v2.5h-19z" />
+    </Svg>
+  );
+}

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import {
   IconeAlerta,
+  IconeChave,
+  IconeObra,
+  IconeOrcamento,
   IconeAutomacao,
   IconeCadeado,
   IconeCaixa,
@@ -84,13 +87,19 @@ const MODULOS = [
     Icone: IconeAlerta,
     titulo: "Ocorrências",
     texto:
-      "Classificadas automaticamente por categoria, local e prioridade, com fotos, histórico e prazo de atendimento: 24 horas para alta, 3 dias para média, 7 dias para baixa.",
+      "Classificadas automaticamente por categoria, local e prioridade (inclusive achados e perdidos), com fotos, histórico, prazo de atendimento e sugestão da IA para resolver.",
   },
   {
     Icone: IconeCaixa,
     titulo: "Encomendas",
     texto:
-      "Registro com foto na chegada, aviso automático ao morador pelo WhatsApp e controle de retirada. Acabou o “não sei quem recebeu”.",
+      "A IA lê a foto da etiqueta e preenche tudo. O morador é avisado pelo WhatsApp e a portaria vê se o aviso foi entregue e lido. Encomenda repetida é barrada, e a retirada fica com a assinatura do morador.",
+  },
+  {
+    Icone: IconeChave,
+    titulo: "Itens de uso",
+    texto:
+      "Tacos, bolas, grelhas e chaves emprestados com prazo de devolução e assinatura de quem retira. Atrasou, fica em vermelho e avisa; avaria vira ocorrência com um clique.",
   },
   {
     Icone: IconeCalendario,
@@ -99,15 +108,28 @@ const MODULOS = [
       "Manutenções e compromissos com recorrência automática, responsável e custo previsto × realizado. Nada de prazo esquecido.",
   },
   {
+    Icone: IconeOrcamento,
+    titulo: "Orçamentos e fornecedores",
+    texto:
+      "A IA lê os orçamentos recebidos e compara as propostas lado a lado; o síndico(a) aprova pelo painel. Cadastro de fornecedores com histórico e avaliação.",
+  },
+  {
+    Icone: IconeObra,
+    titulo: "Obras",
+    texto:
+      "Obras e reformas por unidade, com documentos, vistorias, notificações e multas. Obra embargada gera alerta para toda a equipe, inclusive a portaria.",
+  },
+  {
     Icone: IconePredio,
-    titulo: "Moradores",
-    texto: "Cadastro por unidade, com importação de planilha. É a base para os avisos chegarem à pessoa certa.",
+    titulo: "Unidades e moradores",
+    texto:
+      "Cada unidade com sua situação (lote, em obra ou casa) e cada pessoa com seu vínculo: proprietário, inquilino, morador ou dependente. Importação por planilha.",
   },
   {
     Icone: IconeGrafico,
-    titulo: "Relatórios e indicadores",
+    titulo: "Relatórios e Relatório de Gestão",
     texto:
-      "Gráficos por período, custos da agenda e análise da inteligência artificial. Imprima, salve em PDF ou exporte para planilha.",
+      "Listas detalhadas de cada módulo, com filtros e período, análise da IA e o Relatório de Gestão em PDF, pronto para a prestação de contas e a assembleia.",
   },
   {
     Icone: IconeIA,
@@ -123,7 +145,7 @@ const PERFIS = [
     quem: "Síndico(a)",
     frase: "Prestação de contas com dados, não com memória.",
     texto:
-      "Veja o que acontece no condomínio em tempo real, receba avisos do que é urgente e chegue à assembleia com relatórios prontos.",
+      "Veja o que acontece no condomínio em tempo real, aprove orçamentos pelo painel, receba avisos do que é urgente e chegue à assembleia com o Relatório de Gestão em PDF.",
   },
   {
     Icone: IconeDocumento,
@@ -137,19 +159,19 @@ const PERFIS = [
     quem: "Portaria e equipe",
     frase: "Nenhum aplicativo novo para aprender.",
     texto:
-      "É o WhatsApp que a equipe já usa. Manda texto, foto ou áudio, e o sistema pergunta o que faltar.",
+      "É o WhatsApp que a equipe já usa. Manda texto, foto ou áudio — e, na encomenda, só a foto da etiqueta. O sistema pergunta o que faltar.",
   },
   {
     Icone: IconeEquipe,
     quem: "Moradores",
     frase: "Aviso de encomenda direto no WhatsApp.",
-    texto: "O morador fica sabendo assim que a encomenda chega e retira sem desencontro.",
+    texto: "O morador fica sabendo assim que a encomenda chega, retira sem desencontro e assina na entrega.",
   },
 ];
 
 const SEGURANCA = [
-  { Icone: IconeCadeado, titulo: "Acesso por perfil", texto: "Cada pessoa vê só o que a função exige: síndico, administração, portaria." },
-  { Icone: IconeRelogio, titulo: "Histórico que não se perde", texto: "Toda alteração fica registrada, com data, hora e autor." },
+  { Icone: IconeCadeado, titulo: "Perfis de acesso configuráveis", texto: "O síndico(a) define o que cada função vê e faz em cada tela: administração, portaria, conselho, zelador, arquiteto." },
+  { Icone: IconeRelogio, titulo: "Histórico e auditoria por 10 anos", texto: "Toda criação, alteração ou exclusão fica registrada, com data, hora e autor, e os registros de gestão são guardados por 10 anos." },
   { Icone: IconePredio, titulo: "Dados separados por condomínio", texto: "As informações de um condomínio nunca aparecem para outro." },
   { Icone: IconeNuvem, titulo: "Backup diário e LGPD", texto: "Cópia de segurança todos os dias e prazos de guarda definidos na política de privacidade." },
 ];
@@ -160,7 +182,7 @@ const NIVEIS = [
     nome: "JB Gestão Operacional",
     disponivel: true,
     texto:
-      "Ocorrências, encomendas, agenda, moradores, relatórios, painel do síndico e Assistente JB. Incluído para os condomínios com portaria JB Serviços; para os demais condomínios, sob consulta.",
+      "Ocorrências, encomendas, itens de uso, agenda com orçamentos, obras, unidades e moradores, relatórios com o Relatório de Gestão em PDF, painel do síndico e Assistente JB. Incluído para os condomínios com portaria JB Serviços; para os demais condomínios, sob consulta.",
   },
   {
     numero: "02",
@@ -188,6 +210,10 @@ const PERGUNTAS = [
   {
     p: "O condomínio precisa ser cliente da JB Serviços?",
     r: "Não. Qualquer condomínio pode contratar o sistema, com valores sob consulta conforme o porte. Para os condomínios com portaria JB Serviços, o módulo operacional já vem incluído: é a ferramenta que eleva o padrão de excelência do nosso serviço de portaria.",
+  },
+  {
+    p: "Sou síndico(a) ou administradora de mais de um condomínio. Funciona?",
+    r: "Sim. Com o mesmo login você troca de condomínio no topo do painel, com o perfil de acesso próprio de cada um. Os dados de um condomínio nunca aparecem no outro.",
   },
   {
     p: "Atende condomínios fora de Natal?",
@@ -289,16 +315,16 @@ export default function ComoFunciona() {
         </a>
       </section>
 
-      {/* Vídeo demonstrativo — gravado em 27/09/2026 no painel real, com o
+      {/* Vídeo demonstrativo — gravado em 03/10/2026 (versão 0.25) no painel real, com o
           "Condomínio Demonstração" (dados 100% fictícios). */}
       <section id="video" className="border-b border-jb-line bg-white">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
           <div className="text-center">
             <p className="text-xs font-semibold uppercase tracking-widest text-jb-orange">Demonstração</p>
-            <h2 className="mt-2 font-display text-3xl font-extrabold text-jb-navy">Veja o JB Gestão em 2 minutos</h2>
+            <h2 className="mt-2 font-display text-3xl font-extrabold text-jb-navy">Veja o JB Gestão em 3 minutos</h2>
             <p className="mx-auto mt-3 max-w-2xl text-jb-ink-soft">
-              Ocorrências, encomendas, agenda administrativa, relatórios e a assistente de IA, no painel de verdade,
-              com um condomínio de demonstração.
+              Ocorrências, encomendas com leitura da etiqueta pela IA, itens de uso, agenda, relatórios e a assistente
+              de IA, no painel de verdade, com um condomínio de demonstração.
             </p>
           </div>
           <video
@@ -360,7 +386,7 @@ export default function ComoFunciona() {
             <Passo
               numero="3"
               titulo="A encomenda chega e o morador é avisado na hora"
-              texto="O porteiro fotografa a encomenda e manda pelo WhatsApp com o bloco e o apartamento. O sistema registra e envia, pelo próprio WhatsApp, um aviso ao morador. Na retirada, o porteiro informa, e fica tudo registrado: quem recebeu, quando chegou e quando foi entregue."
+              texto="O porteiro fotografa a etiqueta e manda pelo WhatsApp (ou registra pelo painel). A inteligência artificial lê destinatário, unidade, remetente e rastreio, confere com ele e registra — encomenda repetida é barrada. O morador recebe o aviso pelo WhatsApp e a portaria vê se ele foi entregue e lido. Na retirada, o morador assina na tela ou no protocolo, e fica tudo registrado."
               ilustracao={
                 <div className="grid gap-6 sm:grid-cols-2">
                   <ConversaEncomenda />
