@@ -6,7 +6,7 @@ import { SITE_URL } from "@/lib/empresa";
 import "./globals.css";
 
 const descricao =
-  "Terceirização de portaria, ronda, vigia, limpeza e jardinagem para condomínios em Natal/RN, com a tecnologia do JB Gestão Condominial.";
+  "Terceirização de porteiros 24h, apoio à portaria, limpeza e jardinagem para condomínios em Natal/RN, com a tecnologia do JB Gestão Condominial.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

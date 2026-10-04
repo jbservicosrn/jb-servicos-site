@@ -7,12 +7,10 @@ import {
   IconeJardim,
   IconeLimpeza,
   IconeLocal,
-  IconeMonitor,
   IconePortaria,
   IconeRonda,
   IconeSeta,
   IconeTransparencia,
-  IconeVigia,
 } from "@/components/icones";
 import {
   EMPRESA_FUNDACAO,
@@ -23,23 +21,15 @@ import {
 const SERVICOS = [
   {
     Icone: IconePortaria,
-    titulo: "Portaria",
-    texto: "Controle de acesso e atendimento em postos diurnos, noturnos ou 24h, em escala 12x36.",
+    titulo: "Porteiros 24h",
+    texto:
+      "Controle de acesso e atendimento 24h, em escala 12x36, com porteiros bem treinados e adaptados à tecnologia que a JB integra aos serviços.",
   },
   {
     Icone: IconeRonda,
-    titulo: "Ronda patrimonial",
-    texto: "Rondas motorizadas com motocicleta própria da JB e apoio à portaria.",
-  },
-  {
-    Icone: IconeVigia,
-    titulo: "Vigia noturno",
-    texto: "Acompanhamento das dependências no período da noite, com cobertura de folgas.",
-  },
-  {
-    Icone: IconeMonitor,
-    titulo: "Monitoramento e áreas de lazer",
-    texto: "Monitores de videomonitoramento e de áreas de lazer, fixos ou por diária.",
+    titulo: "Apoio à portaria em áreas extensas",
+    texto:
+      "Monitores que percorrem de moto as áreas de lazer e comuns mais distantes, zelando pelo cumprimento do regimento e acionando a portaria quando necessário.",
   },
   {
     Icone: IconeLimpeza,
@@ -118,7 +108,7 @@ export default function Inicio() {
               Empresa de prestação de serviços terceirizados
             </h1>
             <p className="mt-5 text-lg text-jb-ink-soft">
-              Portaria, ronda, limpeza e jardinagem com equipe registrada, treinada e supervisionada.
+              Porteiros 24h, apoio à portaria em áreas extensas, limpeza e jardinagem com equipe registrada, treinada e supervisionada.
               E o JB Gestão Condominial, nossa plataforma de gestão inteligente: já incluída para os
               condomínios com portaria JB e disponível para contratação à parte por qualquer
               condomínio.
@@ -158,7 +148,7 @@ export default function Inicio() {
       {/* Serviços */}
       <section id="servicos" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <TituloSecao rotulo="Serviços" titulo="Mão de obra completa para o seu condomínio" />
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {SERVICOS.map(({ Icone, titulo, texto }) => (
             <article key={titulo} className="rounded-2xl border border-jb-line bg-white p-6 shadow-jb">
               <div className="inline-flex rounded-xl bg-jb-orange-100 p-3 text-jb-orange-600">
@@ -272,7 +262,7 @@ export default function Inicio() {
                 Natal e região metropolitana
               </p>
               <p className="mt-2 text-sm text-jb-ink-soft">
-                Portaria, ronda, vigia, monitoramento, limpeza e jardinagem.
+                Porteiros 24h, apoio à portaria em áreas extensas, limpeza e jardinagem.
               </p>
             </div>
             <div className="rounded-2xl border border-jb-line bg-jb-ground p-6">

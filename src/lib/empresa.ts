@@ -25,7 +25,7 @@ export const PROPOSTA_EMAIL_LINK = linkEmail("Solicitação de proposta — JB S
   "Nome do condomínio: ",
   "Bairro e cidade: ",
   "Quantidade de unidades (casas ou apartamentos): ",
-  "Serviços de interesse (portaria, ronda, vigia noturno, monitoramento, limpeza, jardinagem, JB Gestão): ",
+  "Serviços de interesse (portaria 24h, apoio à portaria em áreas extensas, limpeza, jardinagem, JB Gestão): ",
   "Meu nome e função (síndico(a), administradora, conselho…): ",
   "Telefone/WhatsApp para contato: ",
   "",
