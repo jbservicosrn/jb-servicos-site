@@ -119,10 +119,10 @@ export default function Inicio() {
                 Solicitar proposta
               </a>
               <a
-                href={JB_GESTAO_URL}
+                href="/jb-gestao"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-jb-navy px-5 py-3 font-display text-sm font-bold text-jb-navy transition hover:bg-jb-navy hover:text-white"
               >
-                Acessar o JB Gestão
+                Conheça o JB Gestão
                 <IconeSeta className="h-4 w-4" />
               </a>
             </div>
