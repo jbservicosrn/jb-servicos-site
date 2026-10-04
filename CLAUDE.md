@@ -245,9 +245,14 @@ quando o dono pedir.
 - **Implantação** (uma vez): R$ 800 a R$ 1.500, conforme o porte (cadastro de
   unidades e moradores, configuração, treinamento da portaria). Não é
   devolvida depois de concluída.
-- **Condomínios com portaria JB**: o site diz "incluído" — confirmar com o dono
-  se é tudo incluso ou Operacional incluso + Gestão com desconto (o Plano
-  Comercial sugeriu a segunda opção; pendente).
+- **Condomínios com portaria JB** (decisão de 04/10/2026): Operacional **e**
+  Gestão inclusos no contrato da portaria, sem cobrança à parte.
+- **Módulo futuro "Atendimento ao morador"** (ainda não desenvolvido): interação
+  com os moradores — segunda via de boleto, reserva de áreas comuns e
+  atendimento em geral. **Cobrado de todos, inclusive de quem tem portaria JB**
+  (mais complexo, eleva custos de WhatsApp e IA). Preço a definir. Segunda via
+  por integração com o sistema financeiro do condomínio, sem a JB emitir
+  boletos. Não anunciar no site antes de existir.
 - As condições abaixo (lançamento, pagamento, reajuste, cancelamento, atraso,
   dados) foram definidas junto com a tabela antiga e seguem valendo até o dono
   dizer o contrário; os descontos do plano anual valem sobre a nova tabela.
