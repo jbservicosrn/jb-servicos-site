@@ -228,26 +228,29 @@ Domains) e copiar o valor que ela mostrar para uma entrada nova no Registro.br.
     o domínio novo). O dono recebeu um pedido pronto para colar numa sessão
     do painel.
 
-## Preços e condições do JB Gestão (definidos em 28–29/09/2026)
+## Preços e condições do JB Gestão (tabela por unidade, escolhida em 04/10/2026)
 
-Para condomínios **sem** portaria JB (os com portaria JB seguem com o sistema
-incluído). O site continua dizendo "sob consulta": só trocar para
-"a partir de R$ 290/mês" quando o dono pedir.
+O dono trocou a tabela por porte de 28–29/09 (R$ 290 a R$ 1.690/mês) pela
+tabela por unidade do "Plano Comercial — JB Gestão Condominial" (02/10/2026),
+"mais atualizada e coerente com as mudanças atuais". A tabela antiga não vale
+mais. Valores a confirmar com o custo real medido no piloto (tela Métricas do
+piloto, no painel). O site continua dizendo "sob consulta": só mostrar preço
+quando o dono pedir.
 
-| Porte | Mensal | Anual parcelado (−10%) | Anual à vista (−15%) |
+| Plano | Inclui | Por unidade/mês | Mínimo/mês |
 |---|---|---|---|
-| Até 40 unidades | R$ 290 | R$ 261/mês | R$ 2.958 |
-| 41 a 100 | R$ 390 | R$ 351/mês | R$ 3.978 |
-| 101 a 200 | R$ 590 | R$ 531/mês | R$ 6.018 |
-| 201 a 350 | R$ 790 | R$ 711/mês | R$ 8.058 |
-| 351 a 500 | R$ 990 | R$ 891/mês | R$ 10.098 |
-| 501 a 700 | R$ 1.290 | R$ 1.161/mês | R$ 13.158 |
-| 701 a 1.000 | R$ 1.690 | R$ 1.521/mês | R$ 17.238 |
-| Acima de 1.000 | sob consulta | — | — |
+| Operacional | WhatsApp da portaria, ocorrências, encomendas, itens de uso, relatórios | R$ 3,50 | R$ 199 |
+| Gestão | Operacional + agenda, orçamentos, obras, Assistente de IA, Relatório de Gestão em PDF | R$ 5,50 | R$ 349 |
 
-- **Implantação** (uma vez, 1 a 3 dias): R$ 990 (até 100 un.), R$ 1.490
-  (101–350), R$ 1.990 (acima de 350). 50% de desconto no plano anual; paga com
-  a 1ª mensalidade ou em 2x. Não é devolvida depois de concluída.
+- **Implantação** (uma vez): R$ 800 a R$ 1.500, conforme o porte (cadastro de
+  unidades e moradores, configuração, treinamento da portaria). Não é
+  devolvida depois de concluída.
+- **Condomínios com portaria JB**: o site diz "incluído" — confirmar com o dono
+  se é tudo incluso ou Operacional incluso + Gestão com desconto (o Plano
+  Comercial sugeriu a segunda opção; pendente).
+- As condições abaixo (lançamento, pagamento, reajuste, cancelamento, atraso,
+  dados) foram definidas junto com a tabela antiga e seguem valendo até o dono
+  dizer o contrário; os descontos do plano anual valem sobre a nova tabela.
 - **Lançamento**: primeiros 10 condomínios com 20% de desconto por 12 meses,
   não cumulativo com os descontos do plano anual.
 - **Pagamento**: boleto ou Pix, vencimento dia 10; nota fiscal a cada
