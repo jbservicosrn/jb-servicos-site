@@ -87,7 +87,7 @@ const DIFERENCIAIS = [
 
 const RECURSOS_JB_GESTAO = [
   "Ocorrências e encomendas registradas pelo WhatsApp, com fotos — a IA lê até a etiqueta da encomenda",
-  "Itens de uso, agenda e orçamentos analisados pela IA no mesmo painel",
+  "Itens de uso, agenda, orçamentos analisados pela IA e obras (condomínios horizontais novos) no mesmo painel",
   "Relatório de Gestão em PDF e Assistente de IA para o síndico e a administração",
   "Contratação à parte para condomínios de todo o Brasil",
   "Módulo operacional incluído para os condomínios com portaria JB",

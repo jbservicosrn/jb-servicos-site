@@ -123,7 +123,7 @@ const MODULOS = [
     Icone: IconePredio,
     titulo: "Unidades e moradores",
     texto:
-      "Cada unidade com seus moradores e cada pessoa com seu vínculo: proprietário, inquilino, morador ou dependente. Importação por planilha.",
+      "Cada unidade com seus moradores (nos condomínios horizontais, também a situação: lote, em obra ou casa) e cada pessoa com seu vínculo: proprietário, inquilino, morador ou dependente. Importação por planilha.",
   },
   {
     Icone: IconeGrafico,
@@ -182,7 +182,7 @@ const NIVEIS = [
     nome: "JB Gestão Operacional",
     disponivel: true,
     texto:
-      "Ocorrências, encomendas, itens de uso, agenda com orçamentos, unidades e moradores, relatórios com o Relatório de Gestão em PDF, painel do síndico e Assistente JB. Incluído para os condomínios com portaria JB Serviços; para os demais condomínios, sob consulta.",
+      "Ocorrências, encomendas, itens de uso, agenda com orçamentos, obras (para condomínios horizontais novos), unidades e moradores, relatórios com o Relatório de Gestão em PDF, painel do síndico e Assistente JB. Incluído para os condomínios com portaria JB Serviços; para os demais condomínios, sob consulta.",
   },
   {
     numero: "02",

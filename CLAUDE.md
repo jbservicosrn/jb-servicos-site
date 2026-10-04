@@ -63,8 +63,8 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
 - Níveis 02 e 03 do JB Gestão aparecem como "Em breve", sem prometer data.
 - **Obras** só aparece como modalidade específica para **condomínios
   horizontais novos, que ainda têm lotes a construir** (card "Obras
-  (condomínios horizontais novos)" em `/jb-gestao`); fora disso, não citar
-  obras nas listas gerais de módulos (04/10/2026).
+  (condomínios horizontais novos)" em `/jb-gestao`). Pode ser citado nas
+  listas de módulos, sempre com essa ressalva (04/10/2026).
 
 ## Antes de dar uma mudança por pronta
 
