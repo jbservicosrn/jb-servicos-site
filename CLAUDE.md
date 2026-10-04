@@ -72,6 +72,16 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   Relatório de Gestão, Assistente JB), perfis, segurança, Nível 01, FAQ, a
   linha de recursos da página inicial e o texto acima do vídeo. Mudança de
   texto do site pode ir ao ar direto; vídeo novo só depois de aprovado.
+- **Serviços presenciais (04/10/2026): Porteiros 24h, Apoio à portaria em
+  áreas extensas, Limpeza e conservação, Jardinagem.** Nunca usar "vigia
+  noturno", "monitoramento"/"videomonitoramento" nem "ronda patrimonial":
+  vigilância e monitoramento passaram a ser segurança privada regulamentada
+  (Estatuto da Segurança Privada, exige autorização estatal). O "apoio à
+  portaria" é o Monitor (registrado como Monitor na CLT) que percorre de moto
+  as áreas de lazer e comuns distantes, zelando pelo regimento e acionando a
+  portaria — descrever assim, sem "segurança", "vigilância" ou "patrulha".
+  Porteiros: "bem treinados e adaptados à tecnologia que a JB integra aos
+  serviços". O Instagram segue o mesmo texto.
 - Como o site descreve a operação (04/10/2026):
   - Encomenda: a IA lê a **foto da etiqueta**; encomenda repetida é barrada;
     na retirada o morador **assina com o dedo no celular da portaria ou no
