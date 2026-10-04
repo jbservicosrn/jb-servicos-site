@@ -54,24 +54,42 @@ export function ConversaPortaria() {
   );
 }
 
+// Mesma encomenda do vídeo da página (etiqueta fictícia, Condomínio Demonstração).
 export function ConversaEncomenda() {
   return (
     <Celular titulo="JB Gestão Condominial" subtitulo="Portaria · Turno diurno">
       <Balao de="porteiro">
-        <div className="flex h-20 items-center justify-center rounded-lg bg-jb-navy-100 text-[11px] text-jb-ink-soft">
-          📷 foto da etiqueta
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/etiqueta-encomenda-exemplo.jpg"
+          alt="Foto da etiqueta da encomenda (fictícia)"
+          className="w-44 rounded-lg"
+          loading="lazy"
+        />
       </Balao>
       <Balao de="sistema">
-        📦 Li a etiqueta: <strong>Ana Souza</strong> · Bloco B · Apto 302 · Loja Exemplo
+        📦 Li a etiqueta:
+        <br />
+        Destinatário: <strong>Sofia Martins</strong>
+        <br />
+        Unidade: Quadra B - Casa 5
+        <br />
+        Remetente: Livraria Página Nova
+        <br />
+        Rastreio: <strong className="font-mono text-[12px]">QH548322698BR</strong>
+        <br />
+        <br />
+        Registrar?
         <br />
         <strong>1</strong> Sim, registrar · <strong>2</strong> Corrigir · <strong>0</strong> Cancelar
       </Balao>
       <Balao de="porteiro">1</Balao>
       <Balao de="sistema">
-        ✅ Encomenda registrada <strong className="font-mono text-[12px]">EN-20261002-0031</strong>
+        ✅ Encomenda registrada
         <br />
-        📲 Aviso enviado para Ana Souza (destinatária)
+        <strong className="font-mono text-[12px]">EN-20261004-0075</strong>
+        <br />
+        📲 Aviso enviado para Sofia Martins (destinatária)
       </Balao>
     </Celular>
   );
@@ -81,13 +99,13 @@ export function AvisoMorador() {
   return (
     <Celular titulo="JB Gestão Condominial" subtitulo="Mensagem para a moradora">
       <Balao de="sistema">
-        Olá, Ana! 📦
+        Olá, Sofia! 📦
         <br />
-        Chegou uma encomenda para você (Bloco B · Apto 302).
+        Chegou uma encomenda para você (Quadra B · Casa 5).
         <br />
-        Ela está guardada na portaria e pode ser retirada quando for melhor para você.
+        Ela está na portaria e pode ser retirada quando for melhor para você.
         <br />
-        <span className="text-[11px] text-jb-ink-soft">Código: EN-20261002-0031</span>
+        <span className="text-[11px] text-jb-ink-soft">Código: EN-20261004-0075</span>
       </Balao>
       <Balao de="sindico">Obrigada! Passo aí à noite 🙏</Balao>
     </Celular>
