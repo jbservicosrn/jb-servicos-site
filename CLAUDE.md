@@ -65,6 +65,24 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   horizontais novos, que ainda têm lotes a construir** (card "Obras
   (condomínios horizontais novos)" em `/jb-gestao`). Pode ser citado nas
   listas de módulos, sempre com essa ressalva (04/10/2026).
+- **A página `/jb-gestao` acompanha as versões do painel** (atualizada até a
+  0.25 em 03–04/10/2026). Ao sair uma versão nova, conferir o que mudou e
+  manter coerentes: módulos (hoje 9: Ocorrências, Encomendas, Itens de uso,
+  Agenda, Orçamentos e fornecedores, Obras, Unidades e moradores, Relatórios e
+  Relatório de Gestão, Assistente JB), perfis, segurança, Nível 01, FAQ, a
+  linha de recursos da página inicial e o texto acima do vídeo. Mudança de
+  texto do site pode ir ao ar direto; vídeo novo só depois de aprovado.
+- Como o site descreve a operação (04/10/2026):
+  - Encomenda: a IA lê a **foto da etiqueta**; encomenda repetida é barrada;
+    na retirada o morador **assina com o dedo no celular da portaria ou no
+    protocolo de papel**.
+  - Itens de uso: assinatura de quem retira **com o dedo, no celular**.
+  - **Assinatura na tela é sempre no celular**, nunca "no computador".
+  - Portaria: **por padrão vê só Ocorrências, Encomendas e Itens de uso**
+    (dito em "Portaria e equipe" e em "Perfis de acesso configuráveis").
+  - Orçamentos: o PDF de cada empresa é lido pela IA, que destaca o mais
+    barato e o melhor custo-benefício e analisa as propostas; o síndico(a)
+    aprova pelo painel.
 
 ## Antes de dar uma mudança por pronta
 
@@ -141,6 +159,13 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   `public/og-jb-gestao.jpg` (1200×630). O link raiz continua com a prévia
   "JB Serviços". O `openGraph` de uma página substitui o do layout inteiro, por
   isso repete `siteName`, `locale` e `type`.
+- Dados do Condomínio Demonstração usados no vídeo (manter assim, os clientes
+  acessam pelo login de demonstração): a moradora fictícia **Sofia Martins
+  (Quadra B - Casa 5) não tem telefone**, de propósito, para nenhum aviso de
+  WhatsApp sair de verdade; o item "Reforma do playground" da agenda fica com
+  os 3 orçamentos **aguardando aprovação** (não aprovar). Há moradores no
+  condomínio 5 com telefone real cadastrado: **nunca usar números reais** em
+  gravações ou testes.
 - O dono **passou a senha do login de demonstração a clientes** (29/09/2026) e
   quer acompanhar os acessos. Todos usam o mesmo login, então só dá para
   distinguir pelas sessões (`auth.sessions` do usuário "Síndico(a)
