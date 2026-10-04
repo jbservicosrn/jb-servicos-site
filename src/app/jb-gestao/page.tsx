@@ -159,7 +159,7 @@ const PERFIS = [
     quem: "Portaria e equipe",
     frase: "Nenhum aplicativo novo para aprender.",
     texto:
-      "É o WhatsApp que a equipe já usa. Manda texto, foto ou áudio — e, na encomenda, só a foto da etiqueta. O sistema pergunta o que faltar. No celular da portaria, o painel mostra só o que o porteiro precisa: ocorrências, encomendas e itens de uso.",
+      "É o WhatsApp que a equipe já usa. Manda texto e foto — e, na encomenda, só a foto da etiqueta. O sistema pergunta o que faltar. No celular da portaria, o painel mostra só o que o porteiro precisa: ocorrências, encomendas e itens de uso.",
   },
   {
     Icone: IconeEquipe,
@@ -374,7 +374,7 @@ export default function ComoFunciona() {
             <Passo
               numero="1"
               titulo="A portaria registra pelo WhatsApp"
-              texto="O porteiro manda uma mensagem, uma foto ou um áudio, do jeito que já faz hoje. Não tem aplicativo novo, formulário ou senha para decorar no celular da portaria."
+              texto="O porteiro manda uma mensagem de texto ou uma foto, do jeito que já faz hoje. Não tem aplicativo novo, formulário ou senha para decorar no celular da portaria."
               ilustracao={<ConversaPortaria />}
             />
             <Passo

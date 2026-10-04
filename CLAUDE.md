@@ -93,6 +93,9 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   - Orçamentos: o PDF de cada empresa é lido pela IA, que destaca o mais
     barato e o melhor custo-benefício e analisa as propostas; o síndico(a)
     aprova pelo painel.
+  - WhatsApp da portaria: **só texto e foto** (04/10/2026). Nunca citar
+    áudio/mensagem de voz: o dono não testou a transcrição e prefere não usar
+    (dicção varia e a transcrição pode sair errada).
 
 ## Antes de dar uma mudança por pronta
 
