@@ -32,7 +32,7 @@ import {
 import { DEMONSTRACAO_EMAIL_LINK, JB_GESTAO_URL } from "@/lib/empresa";
 
 const descricao =
-  "A portaria registra pelo WhatsApp, o sistema organiza e o síndico acompanha tudo em tempo real: ocorrências, encomendas, agenda, relatórios e inteligência artificial.";
+  "A portaria registra pelo WhatsApp, o sistema organiza e o síndico acompanha tudo em tempo real: ocorrências, encomendas, itens de uso, agenda, orçamentos e inteligência artificial.";
 
 // Prévia própria ao compartilhar o link (WhatsApp, redes sociais): título
 // "JB Gestão Condominial" em vez do da página inicial (pedido de 27/09/2026).
@@ -111,19 +111,19 @@ const MODULOS = [
     Icone: IconeOrcamento,
     titulo: "Orçamentos e fornecedores",
     texto:
-      "A IA lê os orçamentos recebidos e compara as propostas lado a lado; o síndico(a) aprova pelo painel. Cadastro de fornecedores com histórico e avaliação.",
+      "Envie o PDF de cada empresa: a IA lê preço, prazo, garantia e pagamento, destaca o mais barato e o melhor custo-benefício e analisa as propostas. O síndico(a) aprova pelo painel. Cadastro de fornecedores com histórico e avaliação.",
   },
   {
     Icone: IconeObra,
-    titulo: "Obras",
+    titulo: "Obras (condomínios horizontais novos)",
     texto:
-      "Obras e reformas por unidade, com documentos, vistorias, notificações e multas. Obra embargada gera alerta para toda a equipe, inclusive a portaria.",
+      "Modalidade específica para condomínios horizontais novos, que ainda têm lotes a construir: cada obra com documentos, vistorias, notificações e multas. Obra embargada gera alerta para toda a equipe, inclusive a portaria.",
   },
   {
     Icone: IconePredio,
     titulo: "Unidades e moradores",
     texto:
-      "Cada unidade com sua situação (lote, em obra ou casa) e cada pessoa com seu vínculo: proprietário, inquilino, morador ou dependente. Importação por planilha.",
+      "Cada unidade com seus moradores e cada pessoa com seu vínculo: proprietário, inquilino, morador ou dependente. Importação por planilha.",
   },
   {
     Icone: IconeGrafico,
@@ -159,18 +159,18 @@ const PERFIS = [
     quem: "Portaria e equipe",
     frase: "Nenhum aplicativo novo para aprender.",
     texto:
-      "É o WhatsApp que a equipe já usa. Manda texto, foto ou áudio — e, na encomenda, só a foto da etiqueta. O sistema pergunta o que faltar.",
+      "É o WhatsApp que a equipe já usa. Manda texto, foto ou áudio — e, na encomenda, só a foto da etiqueta. O sistema pergunta o que faltar. No celular da portaria, o painel mostra só o que o porteiro precisa: ocorrências, encomendas e itens de uso.",
   },
   {
     Icone: IconeEquipe,
     quem: "Moradores",
     frase: "Aviso de encomenda direto no WhatsApp.",
-    texto: "O morador fica sabendo assim que a encomenda chega, retira sem desencontro e assina na entrega.",
+    texto: "O morador fica sabendo assim que a encomenda chega, retira sem desencontro e assina com o dedo, no celular da portaria.",
   },
 ];
 
 const SEGURANCA = [
-  { Icone: IconeCadeado, titulo: "Perfis de acesso configuráveis", texto: "O síndico(a) define o que cada função vê e faz em cada tela: administração, portaria, conselho, zelador, arquiteto." },
+  { Icone: IconeCadeado, titulo: "Perfis de acesso configuráveis", texto: "O síndico(a) define o que cada função vê e faz em cada tela: administração, portaria, conselho, zelador. Por padrão, a portaria vê só ocorrências, encomendas e itens de uso." },
   { Icone: IconeRelogio, titulo: "Histórico e auditoria por 10 anos", texto: "Toda criação, alteração ou exclusão fica registrada, com data, hora e autor, e os registros de gestão são guardados por 10 anos." },
   { Icone: IconePredio, titulo: "Dados separados por condomínio", texto: "As informações de um condomínio nunca aparecem para outro." },
   { Icone: IconeNuvem, titulo: "Backup diário e LGPD", texto: "Cópia de segurança todos os dias e prazos de guarda definidos na política de privacidade." },
@@ -182,7 +182,7 @@ const NIVEIS = [
     nome: "JB Gestão Operacional",
     disponivel: true,
     texto:
-      "Ocorrências, encomendas, itens de uso, agenda com orçamentos, obras, unidades e moradores, relatórios com o Relatório de Gestão em PDF, painel do síndico e Assistente JB. Incluído para os condomínios com portaria JB Serviços; para os demais condomínios, sob consulta.",
+      "Ocorrências, encomendas, itens de uso, agenda com orçamentos, unidades e moradores, relatórios com o Relatório de Gestão em PDF, painel do síndico e Assistente JB. Incluído para os condomínios com portaria JB Serviços; para os demais condomínios, sob consulta.",
   },
   {
     numero: "02",
@@ -315,7 +315,7 @@ export default function ComoFunciona() {
         </a>
       </section>
 
-      {/* Vídeo demonstrativo — gravado em 03/10/2026 (versão 0.25) no painel real, com o
+      {/* Vídeo demonstrativo — gravado em 04/10/2026 (versão 0.25) no painel real, com o
           "Condomínio Demonstração" (dados 100% fictícios). */}
       <section id="video" className="border-b border-jb-line bg-white">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
@@ -323,8 +323,9 @@ export default function ComoFunciona() {
             <p className="text-xs font-semibold uppercase tracking-widest text-jb-orange">Demonstração</p>
             <h2 className="mt-2 font-display text-3xl font-extrabold text-jb-navy">Veja o JB Gestão em 3 minutos</h2>
             <p className="mx-auto mt-3 max-w-2xl text-jb-ink-soft">
-              Ocorrências, encomendas com leitura da etiqueta pela IA, itens de uso, agenda, relatórios e a assistente
-              de IA, no painel de verdade, com um condomínio de demonstração.
+              A portaria registrando pelo WhatsApp, a retirada de encomendas e o empréstimo de itens no celular, com
+              assinatura na tela, e a gestão no computador: ocorrências, agenda, orçamentos analisados pela IA e a
+              assistente de IA. No painel de verdade, com um condomínio de demonstração.
             </p>
           </div>
           <video
@@ -332,11 +333,11 @@ export default function ComoFunciona() {
             controls
             preload="none"
             playsInline
-            poster="/jb-gestao-em-2-minutos-capa.jpg"
+            poster="/jb-gestao-em-3-minutos-capa.jpg"
           >
-            <source src="/jb-gestao-em-2-minutos.mp4?v=2" type="video/mp4" />
+            <source src="/jb-gestao-em-3-minutos.mp4" type="video/mp4" />
             Seu navegador não reproduz vídeos.{" "}
-            <a href="/jb-gestao-em-2-minutos.mp4?v=2" className="underline">
+            <a href="/jb-gestao-em-3-minutos.mp4" className="underline">
               Baixe o vídeo
             </a>
             .

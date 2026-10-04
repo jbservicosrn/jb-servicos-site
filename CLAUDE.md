@@ -61,6 +61,10 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
 - Ilustrações e vídeos usam **somente dados fictícios**, nunca prints com dados
   reais de moradores.
 - Níveis 02 e 03 do JB Gestão aparecem como "Em breve", sem prometer data.
+- **Obras** só aparece como modalidade específica para **condomínios
+  horizontais novos, que ainda têm lotes a construir** (card "Obras
+  (condomínios horizontais novos)" em `/jb-gestao`); fora disso, não citar
+  obras nas listas gerais de módulos (04/10/2026).
 
 ## Antes de dar uma mudança por pronta
 
@@ -70,43 +74,68 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
 
 ## Vídeo e demonstração
 
-- Vídeo "Veja o JB Gestão em 2 minutos" (`public/jb-gestao-em-2-minutos.mp4` +
-  `-capa.jpg`, ~2 min, H.264, sem som), gravado em 27/09/2026 no painel real com
-  o **Condomínio Demonstração** (dados fictícios, `condominios.id = 5` no
-  Supabase) e o login `demonstracao` (perfil Síndico, só nesse condomínio; a
-  senha fica com o dono, nunca no repositório). Os dois ficam guardados para
-  acessos demonstrativos de futuros clientes. Pedido original:
-  `docs/pedido-video-demonstracao.md`.
+- Vídeo "Veja o JB Gestão em 3 minutos" (`public/jb-gestao-em-3-minutos.mp4` +
+  `-capa.jpg`, 2min53s, H.264, sem som), gravado em 04/10/2026 (painel 0.25)
+  no painel real com o **Condomínio Demonstração** (dados fictícios,
+  `condominios.id = 5` no Supabase) e o login `demonstracao` (perfil Síndico,
+  só nesse condomínio; a senha fica com o dono, nunca no repositório). Os dois
+  ficam guardados para acessos demonstrativos de futuros clientes. Substituiu
+  o vídeo de 2 minutos (27/09). Pedido original: `docs/pedido-video-demonstracao.md`.
 - Fica numa seção logo abaixo do topo de `/jb-gestao` (`id="video"`); o botão
   "Veja como funciona" e a seta "Role para conhecer o sistema" levam até ele.
   Carrega só ao dar play (`preload="none"`).
 - Decisões do dono sobre o vídeo:
   - **Mandar para aprovação antes de publicar** qualquer versão nova.
-  - **Ritmo:** o de "0,75×" da primeira versão (pausas longas para dar tempo de
-    ler legendas e telas); digitação e cursor em ritmo natural. A primeira
-    versão (84 s) foi achada rápida demais.
-  - Legendas curtas em cada cena, sem narração e sem música.
-  - Roteiro: Início → ocorrência (foto, prazo, Sugestão da IA) → encomenda
-    (registro com foto → retirada → **foto do protocolo assinado pelo
-    morador**, anexada como comprovante) → agenda (recorrência, custo previsto
-    × realizado, calendário) → relatórios + análise da IA → Assistente IA →
-    animação do WhatsApp (visual de `ilustracoes.tsx`, com o selo "WhatsApp
-    oficial em implantação") → tela final.
+  - **Ritmo:** o de "0,75×" (pausas longas para dar tempo de ler legendas e
+    telas); digitação e cursor em ritmo natural.
+  - Legendas curtas em cada cena, **sem narração e sem música** (fundo musical
+    foi testado em 04/10 e recusado; narração só se for voz humana — do dono
+    ou de locutor —, nunca voz sintética).
+  - Roteiro (04/10/2026), contado como "portaria → síndico":
+    1. Animação do WhatsApp da portaria (selo "WhatsApp oficial em
+       implantação"): ocorrência com foto → encomenda pela **foto da
+       etiqueta** (o bot lê e pede "1 Sim · 2 Corrigir · 0 Cancelar") → aviso
+       no WhatsApp da moradora.
+    2. **Celular da portaria** (painel em tela de celular, com legenda ao
+       lado): retirada da mesma encomenda (mesmo código da animação) com a
+       moradora **assinando com o dedo** → comprovante.
+    3. Celular: empréstimo de item de uso com assinatura com o dedo → atrasados.
+    4. Computador (administração): Início → a mesma ocorrência com foto, prazo
+       e Sugestão da IA → agenda (recorrência, custo previsto × realizado,
+       calendário) → **orçamentos lidos pela IA** (Reforma do playground: 3
+       propostas, "Mais barato", "★ Melhor custo-benefício", análise da IA;
+       **nunca clicar "Aprovar este"**) → Assistente IA → tela final.
+    Relatórios ficaram fora (custo de tempo).
+  - **Assinatura na tela é sempre no celular**, com o dedo (encomendas, quando
+    a portaria usa esse recurso, e itens de uso) — nunca mostrar assinando com
+    mouse no computador.
+  - **Porteiro vê por padrão só Ocorrências, Encomendas e Itens de uso.** Nas
+    cenas de celular aparecem só essas abas e o usuário "Paulo Portaria
+    (fictício)". O condomínio 5 não tem login de porteiro fictício (o "Teste
+    Porteiro" é de outra pessoa): a gravação usou o login do síndico e
+    escondeu as outras abas/trocou o nome só na tela.
+  - Na gravação também ficam escondidos o aviso "Obra embargada" e o alerta
+    de obras (o módulo de obras não entra no vídeo) e os avisos de WhatsApp
+    "não entregue" (a moradora fictícia Sofia Martins não tem telefone, de
+    propósito: **nenhum WhatsApp real é enviado**; nunca usar números reais).
   - Tela final: "Incluso para condomínios com portaria da JB Serviços" +
     "✓ Também disponível para contratação avulsa por qualquer condomínio" +
     "Solicite uma demonstração".
-  - Fotos do vídeo (vazamento, caixa, protocolo) são ilustrações geradas,
-    nunca fotos reais.
-- Ao trocar o arquivo do vídeo mantendo o nome, suba o `?v=N` no endereço
-  dele em `jb-gestao/page.tsx` (hoje `?v=2`), senão o navegador de quem já
-  visitou mostra a versão antiga.
+  - Fotos e etiquetas do vídeo são ilustrações geradas, nunca fotos reais.
+- Ao trocar o arquivo do vídeo mantendo o nome, acrescente/suba um `?v=N` no
+  endereço dele em `jb-gestao/page.tsx`, senão o navegador de quem já visitou
+  mostra a versão antiga.
 - Os scripts de gravação (Playwright + ffmpeg) ficaram fora do repositório.
-  Numa regravação: cada gravação registra mais uma encomenda fictícia no
-  condomínio 5 (apagar a duplicada depois; o comprovante de retirada não pode
-  ser trocado); apagar `relatorios_ia` do condomínio 5 antes, para a análise
-  da IA ser gerada na hora; conferir quadro a quadro que só aparecem dados
-  fictícios. O Chromium desta sessão não toca H.264 — confirmar o play num
-  navegador de verdade.
+  Numa regravação: cada tentativa registra mais uma encomenda fictícia da
+  Sofia (gerar etiqueta com rastreio novo, senão é barrada como repetida; ao
+  final marcar as sobras como retiradas) e um empréstimo da Camila Rezende
+  (marcar como devolvido, senão as raquetes ficam indisponíveis); conferir
+  quadro a quadro que só aparecem dados fictícios. O Chromium desta sessão não
+  toca H.264 — confirmar o play num navegador de verdade.
+- Bugs do painel notados na gravação (tratar no repositório do painel): em
+  Relatórios, "Atualizar análise" sobre uma análise existente quebra a tela
+  ("Application error"); o código da encomenda usa a data em UTC (EN-20261004…
+  registrada em 03/10 às 21h de Brasília).
 - `/jb-gestao` tem prévia própria ao compartilhar o link (WhatsApp/redes):
   título "JB Gestão Condominial", descrição da página e imagem
   `public/og-jb-gestao.jpg` (1200×630). O link raiz continua com a prévia
