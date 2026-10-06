@@ -206,34 +206,43 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   gravações ou testes.
 - **Vídeo "Demonstração completa" (06/10/2026)**, para apresentação
   presencial à síndica de um cliente e a condomínios do mesmo porte — **não
-  vai para o site**. Arquivo `jb-gestao-demonstracao-completa-v2.mp4`
-  (5min59s, narrado, mesma voz "Mário"), fora do repositório; o dono guarda
+  vai para o site**. Arquivo `jb-gestao-demonstracao-completa-v3.mp4`
+  (6min19s, narrado, mesma voz "Mário"), fora do repositório; o dono guarda
   na pasta "Apresentação" de "JB Gestão Condominal" no Google Drive (o upload
   é manual: o conector do Drive não aceita arquivo desse tamanho).
   - Todas as funcionalidades, **exceto as exclusivas da JB** (recursos
     internos): WhatsApp → retirada e itens de uso no celular → Início →
     ocorrências → encomendas (filtro, exportar) → agenda → orçamentos →
-    fornecedores → **obras (cena longa, 1min48s)** → unidades → usuários e
+    fornecedores → **obras (cena longa, 2min08s)** → unidades → usuários e
     perfis → relatórios e Relatório de Gestão → Assistente → tela final.
     Abertura "Demonstração completa do sistema · dados fictícios".
-  - Roteiro em 15 trechos + 6 de obras (o trecho 12 antigo saiu). Em
+  - Roteiro em 15 trechos + 7 de obras (o trecho 12 antigo saiu; v3 com
+    "Obras 1b" e um "Obras 4" novo). Em
     unidades, a fala diz que os dados dos moradores podem vir **do sistema
     que a administração já usa** (na prática, por planilha: não existe
     integração automática; não prometer mais que isso).
   - **Obras detalhado a pedido do dono** (o setor de arquitetura do cliente
     assiste): lista com contadores e filtro de alerta → cadastro (CREA/CAU,
     alvará e validade, ART/RRT, aprovação do projeto, lote vira "Em obra" e
-    "Casa" sozinho) → documentos → vistoria "Com pendências" com foto e
-    próxima na agenda → notificação ligada à vistoria, com artigo, prazo e
+    "Casa" sozinho) → documentos (planta, alvará, RRT) → **aba "Agenda de
+    vistorias"** → agendar vistoria (data, horário, quem vistoria) → registrar
+    a partir do agendamento → vistoria "Com pendências" com foto → notificação ligada à vistoria, com artigo, prazo e
     ciência → obra embargada (motivo, orientação à portaria, multa,
     histórico) → aviso de embargo em outra tela. Na narração, ART/RRT vão
     escritas "A-erre-tê / erre-erre-tê".
-  - A gravação deixou no Condomínio Demonstração, obra do Quadra D - Lote 3:
-    planta baixa e alvará fictícios anexados, uma vistoria "Com pendências"
-    (06/10, próxima em 21/10 na agenda) e a notificação "art. 38" em aberto.
+  - **Vistorias de obra não vão para a Agenda administrativa** (o arquiteto,
+    por padrão, não a vê): desde o painel 0.27.0 (06/10/2026) ficam na aba
+    "📅 Agenda de vistorias" de Obras, com aviso no sino para quem vê Obras.
+    A v2 do vídeo mostrava "a próxima entra na agenda" no fluxo antigo; o
+    dono pediu a correção e a v3 regravou só a cena de obras.
+  - As gravações deixaram no Condomínio Demonstração, obra do Quadra D -
+    Lote 3: planta, alvará e RRT fictícios anexados, uma vistoria "Com
+    pendências" (06/10), vistorias agendadas para 09/10 9h ("Arquiteta do
+    condomínio", conferir a notificação) e 21/10, e a notificação "art. 38"
+    em aberto. Apagar pelo `execute_sql` do Supabase não funcionou (expira).
     Ficam como dados do login de demonstração. Numa regravação dessa cena,
     apagar esses registros antes (tabelas `obra_arquivos`, `obra_vistorias`,
-    `obra_notificacoes`, `obra_historico`) ou ajustar o roteiro.
+    `obra_notificacoes`, `obra_vistorias_agendadas`, `obra_historico`) ou ajustar o roteiro.
   - Nesse vídeo o aviso "Obra embargada" e o módulo de obras **aparecem**
     (no vídeo do site continuam escondidos).
 - O dono **passou a senha do login de demonstração a clientes** (29/09/2026) e
