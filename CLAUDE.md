@@ -204,6 +204,38 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   os 3 orçamentos **aguardando aprovação** (não aprovar). Há moradores no
   condomínio 5 com telefone real cadastrado: **nunca usar números reais** em
   gravações ou testes.
+- **Vídeo "Demonstração completa" (06/10/2026)**, para apresentação
+  presencial à síndica de um cliente e a condomínios do mesmo porte — **não
+  vai para o site**. Arquivo `jb-gestao-demonstracao-completa-v2.mp4`
+  (5min59s, narrado, mesma voz "Mário"), fora do repositório; o dono guarda
+  na pasta "Apresentação" de "JB Gestão Condominal" no Google Drive (o upload
+  é manual: o conector do Drive não aceita arquivo desse tamanho).
+  - Todas as funcionalidades, **exceto as exclusivas da JB** (recursos
+    internos): WhatsApp → retirada e itens de uso no celular → Início →
+    ocorrências → encomendas (filtro, exportar) → agenda → orçamentos →
+    fornecedores → **obras (cena longa, 1min48s)** → unidades → usuários e
+    perfis → relatórios e Relatório de Gestão → Assistente → tela final.
+    Abertura "Demonstração completa do sistema · dados fictícios".
+  - Roteiro em 15 trechos + 6 de obras (o trecho 12 antigo saiu). Em
+    unidades, a fala diz que os dados dos moradores podem vir **do sistema
+    que a administração já usa** (na prática, por planilha: não existe
+    integração automática; não prometer mais que isso).
+  - **Obras detalhado a pedido do dono** (o setor de arquitetura do cliente
+    assiste): lista com contadores e filtro de alerta → cadastro (CREA/CAU,
+    alvará e validade, ART/RRT, aprovação do projeto, lote vira "Em obra" e
+    "Casa" sozinho) → documentos → vistoria "Com pendências" com foto e
+    próxima na agenda → notificação ligada à vistoria, com artigo, prazo e
+    ciência → obra embargada (motivo, orientação à portaria, multa,
+    histórico) → aviso de embargo em outra tela. Na narração, ART/RRT vão
+    escritas "A-erre-tê / erre-erre-tê".
+  - A gravação deixou no Condomínio Demonstração, obra do Quadra D - Lote 3:
+    planta baixa e alvará fictícios anexados, uma vistoria "Com pendências"
+    (06/10, próxima em 21/10 na agenda) e a notificação "art. 38" em aberto.
+    Ficam como dados do login de demonstração. Numa regravação dessa cena,
+    apagar esses registros antes (tabelas `obra_arquivos`, `obra_vistorias`,
+    `obra_notificacoes`, `obra_historico`) ou ajustar o roteiro.
+  - Nesse vídeo o aviso "Obra embargada" e o módulo de obras **aparecem**
+    (no vídeo do site continuam escondidos).
 - O dono **passou a senha do login de demonstração a clientes** (29/09/2026) e
   quer acompanhar os acessos. Todos usam o mesmo login, então só dá para
   distinguir pelas sessões (`auth.sessions` do usuário "Síndico(a)
