@@ -179,7 +179,19 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
 - Bugs do painel notados na gravação (tratar no repositório do painel): em
   Relatórios, "Atualizar análise" sobre uma análise existente quebra a tela
   ("Application error"); o código da encomenda usa a data em UTC (EN-20261004…
-  registrada em 03/10 às 21h de Brasília).
+  registrada em 03/10 às 21h de Brasília). Em 04/10 o dono recebeu um pedido pronto
+  para colar numa sessão do painel corrigindo os dois (e os códigos `OC-` e
+  `EM-`, que seguem o mesmo padrão); conferir lá se já foi feito.
+- **Ilustrações da página iguais ao vídeo:** o passo 3 do "Como funciona"
+  (`ConversaEncomenda` e `AvisoMorador` em `ilustracoes.tsx`) mostra a mesma
+  encomenda do vídeo: foto da etiqueta fictícia
+  (`public/etiqueta-encomenda-exemplo.jpg`), Sofia Martins, Quadra B - Casa 5,
+  Livraria Página Nova, rastreio QH548322698BR, código EN-20261004-0075. Se o
+  vídeo mudar, atualizar as ilustrações junto (o dono notou a diferença).
+- Ferramentas de voz: o NotebookLM **não serve** para narrar o vídeo (gera
+  conversa estilo podcast, sem texto nem tempo controlados); serviria só para
+  um áudio à parte sobre o JB Gestão. Para narração, usar ElevenLabs (o que o
+  dono usou), CapCut ou TTSMaker, um arquivo por trecho do roteiro.
 - `/jb-gestao` tem prévia própria ao compartilhar o link (WhatsApp/redes):
   título "JB Gestão Condominial", descrição da página e imagem
   `public/og-jb-gestao.jpg` (1200×630). O link raiz continua com a prévia
