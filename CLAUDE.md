@@ -106,7 +106,8 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
 ## Vídeo e demonstração
 
 - Vídeo "Veja o JB Gestão em 3 minutos" (`public/jb-gestao-em-3-minutos.mp4` +
-  `-capa.jpg`, 2min53s, H.264, sem som), gravado em 04/10/2026 (painel 0.25)
+  `-capa.jpg`, 2min54s, H.264, **narrado**; a versão sem som ficou em
+  `public/jb-gestao-em-3-minutos-sem-som.mp4`, sem link na página), gravado em 04/10/2026 (painel 0.25)
   no painel real com o **Condomínio Demonstração** (dados fictícios,
   `condominios.id = 5` no Supabase) e o login `demonstracao` (perfil Síndico,
   só nesse condomínio; a senha fica com o dono, nunca no repositório). Os dois
@@ -119,9 +120,21 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   - **Mandar para aprovação antes de publicar** qualquer versão nova.
   - **Ritmo:** o de "0,75×" (pausas longas para dar tempo de ler legendas e
     telas); digitação e cursor em ritmo natural.
-  - Legendas curtas em cada cena, **sem narração e sem música** (fundo musical
-    foi testado em 04/10 e recusado; narração só se for voz humana — do dono
-    ou de locutor —, nunca voz sintética).
+  - Legendas curtas em cada cena + **narração** (06/10/2026, pedido de um
+    administrador de condomínio). Voz gerada pelo dono no ElevenLabs (voz
+    "Mário", português do Brasil) a partir de um roteiro de 9 trechos, um
+    arquivo por cena; os áudios ficam com o dono. No roteiro, "JB" vai
+    escrito "Jota Bê" para a voz não ler errado. **Sem música** (fundo
+    musical testado em 04/10 e recusado). Vozes robóticas (geradas aqui no
+    ambiente) não servem; a rede da sessão bloqueia os serviços de voz, então
+    o áudio sempre vem do dono.
+  - Montagem da narração: cada trecho começa no início da sua cena; a tela
+    vazia do WhatsApp fica parada 3,5 s no começo para a foto aparecer junto
+    com "o porteiro manda a foto"; a fala dos itens de uso é dividida em três
+    partes (formulário / prazo e assinatura / "se atrasar") e o desenho da
+    assinatura passa em 2×; a tela final é esticada para caber a última fala.
+    Se o vídeo for regravado, o áudio precisa ser reencaixado (ou o roteiro
+    regerado com os novos tempos).
   - Roteiro (04/10/2026), contado como "portaria → síndico":
     1. Animação do WhatsApp da portaria (selo "WhatsApp oficial em
        implantação"): ocorrência com foto → encomenda pela **foto da

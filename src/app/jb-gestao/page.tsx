@@ -335,15 +335,15 @@ export default function ComoFunciona() {
             playsInline
             poster="/jb-gestao-em-3-minutos-capa.jpg"
           >
-            <source src="/jb-gestao-em-3-minutos.mp4" type="video/mp4" />
+            <source src="/jb-gestao-em-3-minutos.mp4?v=2" type="video/mp4" />
             Seu navegador não reproduz vídeos.{" "}
-            <a href="/jb-gestao-em-3-minutos.mp4" className="underline">
+            <a href="/jb-gestao-em-3-minutos.mp4?v=2" className="underline">
               Baixe o vídeo
             </a>
             .
           </video>
           <p className="mt-3 text-center text-xs text-jb-ink-soft">
-            Dados fictícios. O atendimento pelo WhatsApp oficial está em implantação.
+            Com narração e legendas. Dados fictícios. O atendimento pelo WhatsApp oficial está em implantação.
           </p>
         </div>
       </section>
