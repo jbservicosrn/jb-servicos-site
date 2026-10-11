@@ -32,7 +32,7 @@ import {
 import { DEMONSTRACAO_EMAIL_LINK, JB_GESTAO_URL } from "@/lib/empresa";
 
 const descricao =
-  "A portaria registra pelo WhatsApp, o sistema organiza e o síndico acompanha tudo em tempo real: ocorrências, encomendas, itens de uso, agenda, orçamentos e inteligência artificial.";
+  "A portaria registra pelo WhatsApp, o sistema organiza e o síndico acompanha tudo em tempo real: ocorrências, encomendas, itens e estoque, agenda e reuniões, comunicados, orçamentos, compras e inteligência artificial.";
 
 // Prévia própria ao compartilhar o link (WhatsApp, redes sociais): título
 // "JB Gestão Condominial" em vez do da página inicial (pedido de 27/09/2026).
@@ -102,16 +102,34 @@ const MODULOS = [
       "Tacos, bolas, grelhas e chaves emprestados com prazo de devolução e assinatura de quem retira, com o dedo na tela do celular. Atrasou, fica em vermelho e avisa; avaria vira ocorrência com um clique.",
   },
   {
-    Icone: IconeCalendario,
-    titulo: "Agenda administrativa",
+    Icone: IconeDocumento,
+    titulo: "Patrimônio e material de consumo",
     texto:
-      "Manutenções e compromissos com recorrência automática, responsável e custo previsto × realizado. Nada de prazo esquecido.",
+      "O patrimônio do condomínio com foto, plaqueta, local e estado, e baixa com motivo. O estoque de material de limpeza e higiene com saldo, aviso de estoque mínimo e entregas à equipe com assinatura.",
+  },
+  {
+    Icone: IconeCalendario,
+    titulo: "Agenda e reuniões",
+    texto:
+      "Manutenções e compromissos com recorrência automática, responsável e custo previsto × realizado. Reuniões com pauta e confirmação de presença pelo celular, sem login. Nada de prazo esquecido.",
+  },
+  {
+    Icone: IconeConversa,
+    titulo: "Comunicados",
+    texto:
+      "Escreva o aviso, escolha os grupos (portaria, zeladoria, moradores) e envie pelo WhatsApp ou e-mail, inclusive no grupo que o condomínio já usa. Quem recebe toca em “Estou ciente” e o painel mostra quem confirmou.",
   },
   {
     Icone: IconeOrcamento,
     titulo: "Orçamentos e fornecedores",
     texto:
-      "Envie o PDF de cada empresa: a IA lê preço, prazo, garantia e pagamento, destaca o mais barato e o melhor custo-benefício e analisa as propostas. O síndico(a) aprova pelo painel. Cadastro de fornecedores com histórico e avaliação.",
+      "A IA escreve o pedido de orçamento e lê o PDF de cada empresa: preço, prazo, garantia e pagamento. Destaca o mais barato e o melhor custo-benefício e analisa as propostas. O síndico(a) aprova pelo painel. Cadastro de fornecedores com histórico e avaliação.",
+  },
+  {
+    Icone: IconeTransparencia,
+    titulo: "Compras e ordem de compra",
+    texto:
+      "Ordem de compra numerada, com a logomarca do condomínio, em PDF, e autorização por limite de valor de cada perfil. Na entrega, a IA lê a nota fiscal, aponta o que não bate com o pedido e o estoque sobe sozinho.",
   },
   {
     Icone: IconeObra,
@@ -123,13 +141,13 @@ const MODULOS = [
     Icone: IconePredio,
     titulo: "Unidades e moradores",
     texto:
-      "Cada unidade com seus moradores (nos condomínios horizontais, também a situação: lote, em obra ou casa) e cada pessoa com seu vínculo: proprietário, inquilino, morador ou dependente. Importação por planilha.",
+      "Cada unidade com seus moradores (nos condomínios horizontais, também a situação: lote, em obra ou casa) e cada pessoa com seu vínculo: proprietário, inquilino, morador ou dependente. Importação por planilha ou integração com o Superlógica, sem cadastrar nada duas vezes.",
   },
   {
     Icone: IconeGrafico,
     titulo: "Relatórios e Relatório de Gestão",
     texto:
-      "Listas detalhadas de cada módulo, com filtros e período, análise da IA e o Relatório de Gestão em PDF, pronto para a prestação de contas e a assembleia.",
+      "Listas detalhadas de cada módulo, com filtros, período e exportação para planilha, análise da IA e o Relatório de Gestão em PDF com a logomarca do condomínio, pronto para a prestação de contas e a assembleia.",
   },
   {
     Icone: IconeIA,
@@ -145,14 +163,14 @@ const PERFIS = [
     quem: "Síndico(a)",
     frase: "Prestação de contas com dados, não com memória.",
     texto:
-      "Veja o que acontece no condomínio em tempo real, aprove orçamentos pelo painel, receba avisos do que é urgente e chegue à assembleia com o Relatório de Gestão em PDF.",
+      "Veja o que acontece no condomínio em tempo real, com o que precisa da sua atenção logo no início. Aprove orçamentos e compras pelo painel, convoque reuniões, mande comunicados e chegue à assembleia com o Relatório de Gestão em PDF.",
   },
   {
     Icone: IconeDocumento,
     quem: "Administradora",
     frase: "Histórico confiável de cada condomínio.",
     texto:
-      "Ocorrências numeradas, evidências e custos organizados por período. Menos telefonema, mais informação na mão.",
+      "Ocorrências numeradas, evidências, compras, estoque e custos organizados por período, com exportação para planilha. Menos telefonema, mais informação na mão.",
   },
   {
     Icone: IconePortaria,
@@ -165,7 +183,7 @@ const PERFIS = [
     Icone: IconeEquipe,
     quem: "Moradores",
     frase: "Aviso de encomenda direto no WhatsApp.",
-    texto: "O morador fica sabendo assim que a encomenda chega, retira sem desencontro e assina com o dedo, no celular da portaria.",
+    texto: "O morador fica sabendo assim que a encomenda chega, retira sem desencontro e assina com o dedo, no celular da portaria. Comunicados e convites de reunião se confirmam pelo celular, sem instalar nada.",
   },
 ];
 
@@ -179,16 +197,16 @@ const SEGURANCA = [
 const NIVEIS = [
   {
     numero: "01",
-    nome: "JB Gestão Operacional",
+    nome: "JB Gestão Operação e Gestão",
     disponivel: true,
     texto:
-      "Ocorrências, encomendas, itens de uso, agenda com orçamentos, obras (para condomínios horizontais novos), unidades e moradores, relatórios com o Relatório de Gestão em PDF, painel do síndico e Assistente JB. Incluído para os condomínios com portaria JB Serviços; para os demais condomínios, sob consulta.",
+      "Em dois planos. Operacional: WhatsApp da portaria, ocorrências, encomendas, itens de uso, unidades e moradores e relatórios. Gestão: tudo do Operacional, mais agenda e reuniões, comunicados, orçamentos, compras, patrimônio e estoque, obras (para condomínios horizontais novos), Relatório de Gestão em PDF e Assistente JB. Incluídos para os condomínios com portaria JB Serviços; para os demais condomínios, sob consulta.",
   },
   {
     numero: "02",
     nome: "JB Gestão Condomínio Conectado",
     disponivel: false,
-    texto: "Canal digital oficial com os moradores: solicitações, comunicados, enquetes e reserva de áreas comuns.",
+    texto: "Atendimento ao morador pelo WhatsApp: solicitações, segunda via de boleto, enquetes e reserva de áreas comuns.",
   },
   {
     numero: "03",
@@ -209,7 +227,7 @@ const PERGUNTAS = [
   },
   {
     p: "O condomínio precisa ser cliente da JB Serviços?",
-    r: "Não. Qualquer condomínio pode contratar o sistema, com valores sob consulta conforme o porte. Para os condomínios com portaria JB Serviços, o módulo operacional já vem incluído: é a ferramenta que eleva o padrão de excelência do nosso serviço de portaria.",
+    r: "Não. Qualquer condomínio pode contratar o sistema, com valores sob consulta conforme o porte. Para os condomínios com portaria JB Serviços, os planos Operacional e Gestão já vêm incluídos: é a ferramenta que eleva o padrão de excelência do nosso serviço de portaria.",
   },
   {
     p: "Sou síndico(a) ou administradora de mais de um condomínio. Funciona?",

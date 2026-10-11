@@ -77,10 +77,10 @@ const DIFERENCIAIS = [
 
 const RECURSOS_JB_GESTAO = [
   "Ocorrências e encomendas registradas pelo WhatsApp, com fotos — a IA lê até a etiqueta da encomenda",
-  "Itens de uso, agenda, orçamentos analisados pela IA e obras (condomínios horizontais novos) no mesmo painel",
+  "Itens e estoque, agenda e reuniões, comunicados, orçamentos analisados pela IA, compras e obras (condomínios horizontais novos) no mesmo painel",
   "Relatório de Gestão em PDF e Assistente de IA para o síndico e a administração",
   "Contratação à parte para condomínios de todo o Brasil",
-  "Módulo operacional incluído para os condomínios com portaria JB",
+  "Planos Operacional e Gestão incluídos para os condomínios com portaria JB",
 ];
 
 const botaoPrincipal =
@@ -188,9 +188,9 @@ export default function Inicio() {
             <TituloSecao rotulo="JB Gestão Condominial" titulo="Mais transparência. Mais controle. Mais confiança." claro />
             <p className="mt-5 leading-relaxed text-white/80">
               A plataforma própria da JB Serviços. Os porteiros registram ocorrências e encomendas
-              pelo WhatsApp, com fotos e vídeos. O síndico e a administração acompanham tudo pelo
+              pelo WhatsApp, com fotos. O síndico e a administração acompanham tudo pelo
               painel web, com histórico, indicadores e apoio de inteligência artificial. Para os
-              condomínios com portaria JB, o módulo operacional já vem incluído, porque é parte do
+              condomínios com portaria JB, os planos Operacional e Gestão já vêm incluídos, porque são parte do
               nosso padrão de excelência na portaria. Os demais condomínios, de todo o Brasil, podem
               contratá-lo à parte.
             </p>
