@@ -116,7 +116,7 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
 ## Vídeo e demonstração
 
 - Vídeo "Veja o JB Gestão em 3 minutos" (`public/jb-gestao-em-3-minutos.mp4` +
-  `-capa.jpg`, 2min54s, H.264, **narrado**; a versão sem som ficou em
+  `-capa.jpg`, 2min58s, H.264, **narrado**; a versão sem som ficou em
   `public/jb-gestao-em-3-minutos-sem-som.mp4`, sem link na página), gravado em 04/10/2026 (painel 0.25)
   no painel real com o **Condomínio Demonstração** (dados fictícios,
   `condominios.id = 5` no Supabase) e o login `demonstracao` (perfil Síndico,
@@ -172,14 +172,20 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
     de obras (o módulo de obras não entra no vídeo) e os avisos de WhatsApp
     "não entregue" (a moradora fictícia Sofia Martins não tem telefone, de
     propósito: **nenhum WhatsApp real é enviado**; nunca usar números reais).
-  - **Desatualizado desde 11/10/2026:** a tela final diz "Incluso para
-    condomínios com portaria da JB Serviços", mas o vídeo mostra também o
-    plano Gestão (agenda, orçamentos, IA), que deixou de ser incluso. Na
-    próxima versão do vídeo, trocar por "Plano Operacional incluso para
-    condomínios com portaria da JB Serviços".
-  - Tela final: "Incluso para condomínios com portaria da JB Serviços" +
-    "✓ Também disponível para contratação avulsa por qualquer condomínio" +
-    "Solicite uma demonstração".
+  - Tela final (refeita em 11/10/2026, `?v=3`, aprovada pelo dono): "Plano
+    Operacional incluso para condomínios com portaria da JB Serviços" + "✓ JB
+    Gestão Completo e contratação por qualquer condomínio: sob consulta" +
+    "Solicite uma demonstração · jbservicosrn.com.br/jb-gestao". Fala nova
+    (ElevenLabs, voz "Mário"): "Para os condomínios com portaria da Jota Bê
+    Serviços, o plano Operacional já vem incluso. O Jota Bê Gestão Completo, e
+    a contratação por qualquer condomínio, estão disponíveis sob consulta.
+    Solicite uma demonstração." A tela começa em 163,52 s e dura 14,2 s (fala
+    0,28 s após o corte). Refeita sem regravar: quadros originais (logo,
+    título, botão) com a faixa das duas linhas (y 380–476) trocada por texto em
+    IBM Plex Sans (cópia que o Office baixou em
+    `%LOCALAPPDATA%/Microsoft/FontCache/4/CloudFonts`), mesma animação; o
+    resto do vídeo foi recomprimido (crf 22, qualidade praticamente igual).
+    ffmpeg instalado nesta máquina pelo winget (`Gyan.FFmpeg`).
   - Fotos e etiquetas do vídeo são ilustrações geradas, nunca fotos reais.
 - Ao trocar o arquivo do vídeo mantendo o nome, acrescente/suba um `?v=N` no
   endereço dele em `jb-gestao/page.tsx`, senão o navegador de quem já visitou

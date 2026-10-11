@@ -348,9 +348,9 @@ export default function ComoFunciona() {
             playsInline
             poster="/jb-gestao-em-3-minutos-capa.jpg"
           >
-            <source src="/jb-gestao-em-3-minutos.mp4?v=2" type="video/mp4" />
+            <source src="/jb-gestao-em-3-minutos.mp4?v=3" type="video/mp4" />
             Seu navegador não reproduz vídeos.{" "}
-            <a href="/jb-gestao-em-3-minutos.mp4?v=2" className="underline">
+            <a href="/jb-gestao-em-3-minutos.mp4?v=3" className="underline">
               Baixe o vídeo
             </a>
             .
