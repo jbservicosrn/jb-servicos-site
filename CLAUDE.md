@@ -51,16 +51,16 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
 - **Nenhum cliente citado** pelo nome (nem o Montreal).
 - Endereço: só "Natal/RN". Serviços presenciais: Natal e região metropolitana.
   Soluções de tecnologia: todo o Brasil.
-- JB Gestão **incluído só para condomínios com portaria JB**; os demais
-  contratam à parte (sob consulta). Nunca escrever "grátis para clientes JB"
-  de forma genérica.
+- **Só o JB Gestão Operacional vem incluído para condomínios com portaria JB**
+  (decisão de 11/10/2026); o JB Gestão Completo (plano Gestão) é sob consulta
+  para todos, e os demais condomínios contratam qualquer plano à parte (sob
+  consulta). Nunca escrever "grátis para clientes JB" de forma genérica.
 - Selo "Já em uso em um condomínio em Parnamirim/RN" **desligado**
   (`MOSTRAR_SELO_EM_USO` em `src/app/jb-gestao/page.tsx`) até o WhatsApp
   oficial ser liberado pela Meta (previsão: 2ª semana de out/2026). Religar só
   quando o dono pedir.
 - Ilustrações e vídeos usam **somente dados fictícios**, nunca prints com dados
   reais de moradores.
-- Níveis 02 e 03 do JB Gestão aparecem como "Em breve", sem prometer data.
 - **Obras** só aparece como modalidade específica para **condomínios
   horizontais novos, que ainda têm lotes a construir** (card "Obras
   (condomínios horizontais novos)" em `/jb-gestao`). Pode ser citado nas
@@ -75,12 +75,13 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   acima do vídeo. Mudança de texto do site pode ir ao ar direto; vídeo novo
   só depois de aprovado. Módulo novo do painel entra também na tabela de
   planos (seção de preços abaixo), num plano definido.
-- **Nível 01 = "JB Gestão Operação e Gestão"** (11/10/2026), vendido nos dois
-  planos da tabela (Operacional e Gestão), para não confundir com o plano
-  Operacional. **Nível 02 "Condomínio Conectado" = atendimento ao morador
-  pelo WhatsApp** (solicitações, segunda via de boleto, enquetes, reservas):
-  é o módulo futuro "Atendimento ao morador" da seção de preços. Comunicados
-  já existem no Nível 01 e não entram mais no Nível 02.
+- **Seção "Planos" de `/jb-gestao` (11/10/2026): dois cartões, ambos
+  "Disponível"** — 01 "JB Gestão Operacional" (plano Operacional; incluído
+  para portaria JB, demais sob consulta) e 02 "JB Gestão Completo" (plano
+  Gestão; sob consulta). Os antigos níveis "Condomínio Conectado" e
+  "Inteligente Avançado" ficam **fora do site** até o dono pedir; o
+  atendimento ao morador pelo WhatsApp é o módulo futuro "Atendimento ao
+  morador" da seção de preços.
 - **Serviços presenciais (04/10/2026): Porteiros 24h, Apoio à portaria em
   áreas extensas, Limpeza e conservação, Jardinagem.** Nunca usar "vigia
   noturno", "monitoramento"/"videomonitoramento" nem "ronda patrimonial":
@@ -171,6 +172,11 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
     de obras (o módulo de obras não entra no vídeo) e os avisos de WhatsApp
     "não entregue" (a moradora fictícia Sofia Martins não tem telefone, de
     propósito: **nenhum WhatsApp real é enviado**; nunca usar números reais).
+  - **Desatualizado desde 11/10/2026:** a tela final diz "Incluso para
+    condomínios com portaria da JB Serviços", mas o vídeo mostra também o
+    plano Gestão (agenda, orçamentos, IA), que deixou de ser incluso. Na
+    próxima versão do vídeo, trocar por "Plano Operacional incluso para
+    condomínios com portaria da JB Serviços".
   - Tela final: "Incluso para condomínios com portaria da JB Serviços" +
     "✓ Também disponível para contratação avulsa por qualquer condomínio" +
     "Solicite uma demonstração".
@@ -337,10 +343,9 @@ quando o dono pedir.
   Gestão enquanto for limitado a 10 por envio; envio em massa aos moradores
   pelo bot é do módulo "Atendimento ao morador" (abaixo). Franquia ou preço
   por mensagem a definir com o custo real medido.
-- **Condomínios com portaria JB** (decisão de 04/10/2026): Operacional **e**
-  Gestão inclusos no contrato da portaria, sem cobrança à parte.
-  Mantido em 11/10/2026 com o Gestão ampliado (compras, estoque, comunicados),
-  até o dono decidir o contrário.
+- **Condomínios com portaria JB** (decisão de 11/10/2026, substitui a de
+  04/10): **só o Operacional** vem incluso no contrato da portaria. O Gestão
+  é sob consulta, como para os demais condomínios.
 - **Módulo futuro "Atendimento ao morador"** (ainda não desenvolvido): interação
   com os moradores — segunda via de boleto, reserva de áreas comuns e
   atendimento em geral. **Cobrado de todos, inclusive de quem tem portaria JB**

@@ -197,22 +197,17 @@ const SEGURANCA = [
 const NIVEIS = [
   {
     numero: "01",
-    nome: "JB Gestão Operação e Gestão",
+    nome: "JB Gestão Operacional",
     disponivel: true,
     texto:
-      "Em dois planos. Operacional: WhatsApp da portaria, ocorrências, encomendas, itens de uso, unidades e moradores e relatórios. Gestão: tudo do Operacional, mais agenda e reuniões, comunicados, orçamentos, compras, patrimônio e estoque, obras (para condomínios horizontais novos), Relatório de Gestão em PDF e Assistente JB. Incluídos para os condomínios com portaria JB Serviços; para os demais condomínios, sob consulta.",
+      "WhatsApp da portaria, ocorrências, encomendas, itens de uso, unidades e moradores e relatórios. Incluído para os condomínios com portaria JB Serviços; para os demais, sob consulta.",
   },
   {
     numero: "02",
-    nome: "JB Gestão Condomínio Conectado",
-    disponivel: false,
-    texto: "Atendimento ao morador pelo WhatsApp: solicitações, segunda via de boleto, enquetes e reserva de áreas comuns.",
-  },
-  {
-    numero: "03",
-    nome: "JB Gestão Inteligente Avançado",
-    disponivel: false,
-    texto: "Análises mais profundas, manutenção preventiva e acompanhamento do desempenho operacional.",
+    nome: "JB Gestão Completo",
+    disponivel: true,
+    texto:
+      "Tudo do Operacional, mais agenda e reuniões, comunicados, orçamentos, compras, patrimônio e estoque, obras (para condomínios horizontais novos), Relatório de Gestão em PDF e Assistente JB. Sob consulta.",
   },
 ];
 
@@ -227,7 +222,7 @@ const PERGUNTAS = [
   },
   {
     p: "O condomínio precisa ser cliente da JB Serviços?",
-    r: "Não. Qualquer condomínio pode contratar o sistema, com valores sob consulta conforme o porte. Para os condomínios com portaria JB Serviços, os planos Operacional e Gestão já vêm incluídos: é a ferramenta que eleva o padrão de excelência do nosso serviço de portaria.",
+    r: "Não. Qualquer condomínio pode contratar o sistema, com valores sob consulta conforme o porte. Para os condomínios com portaria JB Serviços, o JB Gestão Operacional já vem incluído: é a ferramenta que eleva o padrão de excelência do nosso serviço de portaria.",
   },
   {
     p: "Sou síndico(a) ou administradora de mais de um condomínio. Funciona?",
@@ -495,11 +490,11 @@ export default function ComoFunciona() {
       <section className="border-y border-jb-line bg-white">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
           <Titulo
-            rotulo="Evolução"
+            rotulo="Planos"
             titulo="Uma plataforma que cresce com o seu condomínio"
-            texto="O JB Gestão começa pela operação e já tem as próximas etapas desenhadas."
+            texto="Comece pela operação da portaria e, quando quiser, amplie para a gestão completa do condomínio."
           />
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
             {NIVEIS.map(({ numero, nome, disponivel, texto }) => (
               <div
                 key={numero}

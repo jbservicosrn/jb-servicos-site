@@ -80,7 +80,7 @@ const RECURSOS_JB_GESTAO = [
   "Itens e estoque, agenda e reuniões, comunicados, orçamentos analisados pela IA, compras e obras (condomínios horizontais novos) no mesmo painel",
   "Relatório de Gestão em PDF e Assistente de IA para o síndico e a administração",
   "Contratação à parte para condomínios de todo o Brasil",
-  "Planos Operacional e Gestão incluídos para os condomínios com portaria JB",
+  "JB Gestão Operacional incluído para os condomínios com portaria JB",
 ];
 
 const botaoPrincipal =
@@ -109,8 +109,8 @@ export default function Inicio() {
             </h1>
             <p className="mt-5 text-lg text-jb-ink-soft">
               Porteiros 24h, apoio à portaria em áreas extensas, limpeza e jardinagem com equipe registrada, treinada e supervisionada.
-              E o JB Gestão Condominial, nossa plataforma de gestão inteligente: já incluída para os
-              condomínios com portaria JB e disponível para contratação à parte por qualquer
+              E o JB Gestão Condominial, nossa plataforma de gestão inteligente: o plano Operacional já vem incluído para os
+              condomínios com portaria JB, e a plataforma está disponível para contratação à parte por qualquer
               condomínio.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -190,7 +190,7 @@ export default function Inicio() {
               A plataforma própria da JB Serviços. Os porteiros registram ocorrências e encomendas
               pelo WhatsApp, com fotos. O síndico e a administração acompanham tudo pelo
               painel web, com histórico, indicadores e apoio de inteligência artificial. Para os
-              condomínios com portaria JB, os planos Operacional e Gestão já vêm incluídos, porque são parte do
+              condomínios com portaria JB, o JB Gestão Operacional já vem incluído, porque é parte do
               nosso padrão de excelência na portaria. Os demais condomínios, de todo o Brasil, podem
               contratá-lo à parte.
             </p>
