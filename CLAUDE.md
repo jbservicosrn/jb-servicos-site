@@ -365,8 +365,9 @@ continua dizendo "sob consulta": só mostrar preço quando o dono pedir.
   pelo bot é do módulo "Atendimento ao morador" (abaixo). Franquia ou preço
   por mensagem a definir com o custo real medido.
 - **Condomínios com portaria JB** (decisão de 11/10/2026, substitui a de
-  04/10): **só o Operacional** vem incluso no contrato da portaria. O Gestão
-  é sob consulta, como para os demais condomínios.
+  04/10): **só o Operacional** vem incluso no contrato da portaria, **sem
+  cobrança de implantação**. O Gestão é sob consulta, como para os demais
+  condomínios.
 - **Montreal Condomínio Clube I: isento nos dois planos** (decisão do dono,
   11/10/2026): já é cliente dos serviços da JB, cedeu o condomínio para o
   piloto e se comprometeu a indicar a JB. Tem 840 lotes e usa muito Obras.
