@@ -395,9 +395,12 @@ continua dizendo "sob consulta": só mostrar preço quando o dono pedir.
 - **Atraso**: multa 2% + juros 1% ao mês; acesso suspenso a partir de 30 dias
   (dados preservados); contrato pode ser encerrado a partir de 60 dias.
 - **Dados após cancelar**: 30 dias para exportar, depois apagados (LGPD).
-- Documento para clientes: "JB Gestão — Planos, preços e condições
-  comerciais" (PDF + Word; não estava no Drive em 11/10/2026, refazer com a
-  tabela por faixas se for preciso). A planilha interna de custos e margens
+- **Documento para clientes: "Proposta comercial — JB Gestão Condominial"**
+  (PDF de 6 páginas, 11/10/2026, Drive › Comercial; fonte editável em
+  "Proposta comercial — arquivos de edição": HTML + imagens, PDF gerado pelo
+  Edge em modo headless). Sem custos, margens, concorrentes, nome de cliente
+  nem regras internas; e-mail só no botão (não escrito). Mudou preço, plano
+  ou condição → atualizar a proposta também. A planilha interna de custos e margens
   (`precificacao-jb-gestao.xlsx`) fica com o dono, **fora do repositório**:
   nunca publicar custos nem margens.
 - Pendências do dono: contrato revisado por advogado; confirmar imposto e nota
