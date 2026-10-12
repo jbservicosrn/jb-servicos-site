@@ -356,7 +356,9 @@ continua dizendo "sob consulta": só mostrar preço quando o dono pedir.
   de unidades e moradores, configuração, perfis e treinamento da portaria.
   Não é devolvida depois de concluída. **Com integração ao Superlógica: o
   mesmo valor da faixa** (o dono tirou o mínimo de R$ 1.500 para não pesar
-  nos pequenos).
+  nos pequenos). **Pode ser parcelada em até 3 vezes**, junto com as primeiras
+  mensalidades. Sem desconto de implantação no plano anual (decisão do dono:
+  quem assina anual e acumula dados dificilmente deixa o sistema).
 - **Comunicados e convites de reunião** enviados pelo WhatsApp ou e-mail do
   próprio síndico(a)/administração não custam nada à JB: inclusos no Gestão.
 - **Envio pelo bot da JB** (convites e comunicados, limite de 10 destinatários
