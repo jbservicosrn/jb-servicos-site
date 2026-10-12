@@ -318,25 +318,40 @@ Domains) e copiar o valor que ela mostrar para uma entrada nova no Registro.br.
     o domínio novo). O dono recebeu um pedido pronto para colar numa sessão
     do painel.
 
-## Preços e condições do JB Gestão (tabela por unidade, escolhida em 04/10/2026)
+## Preços e condições do JB Gestão (tabela por faixas, aprovada em 11/10/2026)
 
-O dono trocou a tabela por porte de 28–29/09 (R$ 290 a R$ 1.690/mês) pela
-tabela por unidade do "Plano Comercial — JB Gestão Condominial" (02/10/2026),
-"mais atualizada e coerente com as mudanças atuais". A tabela antiga não vale
-mais. Valores a confirmar com o custo real medido no piloto (tela Métricas do
-piloto, no painel). O site continua dizendo "sob consulta": só mostrar preço
-quando o dono pedir.
+Histórico: tabela por porte (28–29/09, R$ 290 a R$ 1.690/mês) → tabela por
+unidade (04/10: Operacional R$ 3,50 e Gestão R$ 5,50 por unidade/mês,
+mínimos R$ 199 e R$ 349) → **tabela por faixas (11/10/2026, aprovada pelo
+dono)**, depois da pesquisa de mercado: o preço por unidade ficava fora do
+mercado nos condomínios grandes. As anteriores não valem mais. O site
+continua dizendo "sob consulta": só mostrar preço quando o dono pedir.
 
-| Plano | Inclui | Por unidade/mês | Mínimo/mês |
-|---|---|---|---|
-| Operacional | WhatsApp da portaria, ocorrências, encomendas, itens de uso comum (empréstimos), unidades e moradores, relatórios dessas áreas | R$ 3,50 | R$ 199 |
-| Gestão | Operacional + agenda e reuniões, comunicados, orçamentos e fornecedores, compras e ordem de compra (nota fiscal lida pela IA), patrimônio e estoque de material de consumo, obras, Assistente de IA, Relatório de Gestão em PDF, integração com o Superlógica | R$ 5,50 | R$ 349 |
+| Unidades | Operacional (mês) | Gestão — JB Gestão Completo (mês) |
+|---|---|---|
+| até 60 | R$ 199 | R$ 349 |
+| 61 a 120 | R$ 349 | R$ 549 |
+| 121 a 250 | R$ 549 | R$ 890 |
+| 251 a 500 | R$ 790 | R$ 1.290 |
+| 501 a 1.000 | R$ 990 | R$ 1.690 |
+| acima de 1.000 | sob consulta | sob consulta |
 
-- **Composição revista em 11/10/2026** (painel 0.37): as novidades da 0.28 à
-  0.37 entraram no Gestão, sem mudar os valores. **Revisão de valores depois
-  de ~30 dias de piloto** (tela Métricas do piloto): o Gestão passou a
-  entregar bem mais pelos mesmos R$ 5,50; proposta a avaliar: R$ 6,50/un. e
-  mínimo de R$ 399 para contratos novos.
+- **Obras** (condomínios horizontais novos): o Gestão inclui até 10 obras
+  ativas; acima, R$ 15 por obra ativa/mês (em andamento ou embargada; lote
+  vazio e casa pronta não contam).
+- **O que cada plano inclui** (11/10/2026): Operacional = WhatsApp da
+  portaria, ocorrências, encomendas, itens de uso comum (empréstimos),
+  unidades e moradores, relatórios dessas áreas. Gestão = Operacional +
+  agenda e reuniões, comunicados, orçamentos e fornecedores, compras e ordem
+  de compra (nota fiscal lida pela IA), patrimônio e estoque, obras,
+  Assistente de IA, Relatório de Gestão em PDF, integração com o Superlógica.
+- Pesquisa e roteiro de apresentação para a equipe: "Pesquisa de mercado e
+  preços — JB Gestão Condominial" (Word, Drive › JB Gestão Condominal ›
+  Comercial). Valores aplicados também no Plano Comercial, na Página do
+  produto e no Programa de parceiros (exemplos recalculados pela faixa de 61
+  a 120 unidades, R$ 549).
+- Revisar a tabela com o custo real do piloto (tela Métricas do piloto) e
+  cotações formais de concorrentes.
 - **Implantação** (uma vez): R$ 800 a R$ 1.500, conforme o porte (cadastro de
   unidades e moradores, configuração, treinamento da portaria). Não é
   devolvida depois de concluída. **Com integração ao Superlógica: R$ 1.500**
@@ -355,18 +370,6 @@ quando o dono pedir.
 - **Montreal Condomínio Clube I: isento nos dois planos** (decisão do dono,
   11/10/2026): já é cliente dos serviços da JB, cedeu o condomínio para o
   piloto e se comprometeu a indicar a JB. Tem 840 lotes e usa muito Obras.
-- **Pesquisa de mercado (11/10/2026):** documento interno "Pesquisa de
-  mercado e preços — JB Gestão Condominial" (Word, Drive › JB Gestão
-  Condominal › Comercial), para a equipe consultar antes de oferecer o
-  sistema. Conclusão: até ~150 unidades a tabela por unidade está alinhada ao
-  mercado; acima disso o preço linear fica fora (ferramentas especializadas
-  param em ~R$ 900/mês). **Proposta de tabela por faixas, aguardando
-  aprovação do dono** — Operacional / Gestão por mês: até 60 un. R$ 199 / 349;
-  61–120 R$ 349 / 549; 121–250 R$ 549 / 890; 251–500 R$ 790 / 1.290;
-  501–1.000 R$ 990 / 1.690; acima, sob consulta. Obras: até 10 obras ativas
-  no Gestão; acima, R$ 15 por obra ativa/mês. Aprovada, substitui a tabela
-  por unidade no Plano Comercial, na Página do produto e no Programa de
-  parceiros.
 - **Módulo futuro "Atendimento ao morador"** (ainda não desenvolvido): interação
   com os moradores — segunda via de boleto, reserva de áreas comuns e
   atendimento em geral. **Cobrado de todos, inclusive de quem tem portaria JB**
@@ -390,7 +393,8 @@ quando o dono pedir.
   (dados preservados); contrato pode ser encerrado a partir de 60 dias.
 - **Dados após cancelar**: 30 dias para exportar, depois apagados (LGPD).
 - Documento para clientes: "JB Gestão — Planos, preços e condições
-  comerciais" (PDF + Word). A planilha interna de custos e margens
+  comerciais" (PDF + Word; não estava no Drive em 11/10/2026, refazer com a
+  tabela por faixas se for preciso). A planilha interna de custos e margens
   (`precificacao-jb-gestao.xlsx`) fica com o dono, **fora do repositório**:
   nunca publicar custos nem margens.
 - Pendências do dono: contrato revisado por advogado; confirmar imposto e nota
