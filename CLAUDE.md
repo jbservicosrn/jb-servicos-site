@@ -352,6 +352,21 @@ quando o dono pedir.
 - **Condomínios com portaria JB** (decisão de 11/10/2026, substitui a de
   04/10): **só o Operacional** vem incluso no contrato da portaria. O Gestão
   é sob consulta, como para os demais condomínios.
+- **Montreal Condomínio Clube I: isento nos dois planos** (decisão do dono,
+  11/10/2026): já é cliente dos serviços da JB, cedeu o condomínio para o
+  piloto e se comprometeu a indicar a JB. Tem 840 lotes e usa muito Obras.
+- **Pesquisa de mercado (11/10/2026):** documento interno "Pesquisa de
+  mercado e preços — JB Gestão Condominial" (Word, Drive › JB Gestão
+  Condominal › Comercial), para a equipe consultar antes de oferecer o
+  sistema. Conclusão: até ~150 unidades a tabela por unidade está alinhada ao
+  mercado; acima disso o preço linear fica fora (ferramentas especializadas
+  param em ~R$ 900/mês). **Proposta de tabela por faixas, aguardando
+  aprovação do dono** — Operacional / Gestão por mês: até 60 un. R$ 199 / 349;
+  61–120 R$ 349 / 549; 121–250 R$ 549 / 890; 251–500 R$ 790 / 1.290;
+  501–1.000 R$ 990 / 1.690; acima, sob consulta. Obras: até 10 obras ativas
+  no Gestão; acima, R$ 15 por obra ativa/mês. Aprovada, substitui a tabela
+  por unidade no Plano Comercial, na Página do produto e no Programa de
+  parceiros.
 - **Módulo futuro "Atendimento ao morador"** (ainda não desenvolvido): interação
   com os moradores — segunda via de boleto, reserva de áreas comuns e
   atendimento em geral. **Cobrado de todos, inclusive de quem tem portaria JB**
