@@ -327,14 +327,14 @@ dono)**, depois da pesquisa de mercado: o preço por unidade ficava fora do
 mercado nos condomínios grandes. As anteriores não valem mais. O site
 continua dizendo "sob consulta": só mostrar preço quando o dono pedir.
 
-| Unidades | Operacional (mês) | Gestão — JB Gestão Completo (mês) |
-|---|---|---|
-| até 60 | R$ 199 | R$ 349 |
-| 61 a 120 | R$ 349 | R$ 549 |
-| 121 a 250 | R$ 549 | R$ 890 |
-| 251 a 500 | R$ 790 | R$ 1.290 |
-| 501 a 1.000 | R$ 990 | R$ 1.690 |
-| acima de 1.000 | sob consulta | sob consulta |
+| Unidades | Operacional (mês) | Gestão — JB Gestão Completo (mês) | Implantação (uma vez) |
+|---|---|---|---|
+| até 60 | R$ 199 | R$ 349 | R$ 800 |
+| 61 a 120 | R$ 349 | R$ 549 | R$ 1.000 |
+| 121 a 250 | R$ 549 | R$ 890 | R$ 1.500 |
+| 251 a 500 | R$ 790 | R$ 1.290 | R$ 2.200 |
+| 501 a 1.000 | R$ 990 | R$ 1.690 | R$ 3.000 |
+| acima de 1.000 | sob consulta | sob consulta | sob consulta |
 
 - **Obras** (condomínios horizontais novos): o Gestão inclui até 10 obras
   ativas; acima, R$ 15 por obra ativa/mês (em andamento ou embargada; lote
@@ -352,11 +352,11 @@ continua dizendo "sob consulta": só mostrar preço quando o dono pedir.
   a 120 unidades, R$ 549).
 - Revisar a tabela com o custo real do piloto (tela Métricas do piloto) e
   cotações formais de concorrentes.
-- **Implantação** (uma vez): R$ 800 a R$ 1.500, conforme o porte (cadastro de
-  unidades e moradores, configuração, treinamento da portaria). Não é
-  devolvida depois de concluída. **Com integração ao Superlógica: R$ 1.500**
-  (o cadastro vem de lá, mas há configuração, simulação e acompanhamento da
-  sincronização).
+- **Implantação** (uma vez, por faixa — tabela acima; 11/10/2026): cadastro
+  de unidades e moradores, configuração, perfis e treinamento da portaria.
+  Não é devolvida depois de concluída. **Com integração ao Superlógica: o
+  mesmo valor da faixa** (o dono tirou o mínimo de R$ 1.500 para não pesar
+  nos pequenos).
 - **Comunicados e convites de reunião** enviados pelo WhatsApp ou e-mail do
   próprio síndico(a)/administração não custam nada à JB: inclusos no Gestão.
 - **Envio pelo bot da JB** (convites e comunicados, limite de 10 destinatários
