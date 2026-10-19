@@ -52,7 +52,7 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   Pedidos de demonstração" (data table `mEXTy4Ww7fVqRiHa`) e avisa no Gmail
   da JB (responder o e-mail responde à pessoa). Contra spam: campo-isca
   `site`, envio em menos de 3 s ignorado e filtro `onlyRunIf` no webhook (não
-  gasta execução do n8n). Guarda a página e os `utm_source/medium/campaign`
+  gasta execução do n8n; quem é barrado recebe 403 "Authorization data is wrong!", e isso é normal). Guarda a página e os `utm_source/medium/campaign`
   do link, para medir os anúncios. LGPD: aceite obrigatório; todo dia 1º o
   n8n apaga pedidos com mais de 12 meses, menos os com `situacao = cliente`
   (e-mails do Gmail: apagar à mão); a Política de Privacidade descreve isso.
