@@ -10,6 +10,9 @@ const descricao =
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  // Verificação do Google Search Console (propriedade https://www.jbservicosrn.com.br,
+  // conta Google da JB, 19/10/2026). Não apagar: sem ela o Search Console perde o acesso.
+  verification: { google: "iFwcpYwHHSLEy2P0hxwq8m1vqWEbxsMilR3_WZ5Ev4c" },
   title: "JB Serviços — Terceirização para condomínios em Natal/RN",
   description: descricao,
   openGraph: {

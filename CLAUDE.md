@@ -326,8 +326,9 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
 - Dados estruturados (JSON-LD, `src/components/dados-estruturados.tsx`):
   Organization na página inicial e SoftwareApplication em `/jb-gestao`. Sem
   telefone, e-mail ou avaliações.
-- Pendente: verificar o site no Google Search Console (conta Google da JB) e
-  enviar o sitemap por lá.
+- Google Search Console: propriedade `https://www.jbservicosrn.com.br` (conta
+  Google da JB), verificada pela tag em `layout.tsx` (`verification.google`,
+  19/10/2026; não apagar). Enviar o sitemap por lá.
 
 ## Visitas do site (Vercel Web Analytics)
 
