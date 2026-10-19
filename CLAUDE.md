@@ -38,9 +38,26 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
 
 ## Decisões do dono (não reverter sem ele pedir)
 
-- **Sem WhatsApp no site** por enquanto: propostas e demonstrações só por
-  e-mail. O número (84) 99638-5174 está anotado em `empresa.ts`, fora do site,
-  até existir atendimento automatizado.
+- **Sem WhatsApp no site** por enquanto: propostas por e-mail; demonstrações
+  pelo formulário (abaixo) ou por e-mail. O número (84) 99638-5174 está
+  anotado em `empresa.ts`, fora do site, até existir atendimento automatizado.
+- **Formulário "Agendar demonstração" (18/10/2026, Fase 1 do marketing
+  digital):** seção `#demonstracao` no fim de `/jb-gestao`
+  (`src/components/formulario-demonstracao.tsx`). O site continua sem
+  servidor: o navegador envia direto ao webhook do n8n
+  (`PEDIDO_DEMONSTRACAO_URL` em `empresa.ts`, workflow "JB Serviços — Site —
+  Pedidos de demonstração", id `3C1KbyJpPbml8l1Y`), como formulário simples
+  (sem consulta prévia de CORS; origens aceitas na opção `allowedOrigins` do
+  webhook: www, raiz e `localhost:3000`). O n8n guarda na tabela "Site —
+  Pedidos de demonstração" (data table `mEXTy4Ww7fVqRiHa`) e avisa no Gmail
+  da JB (responder o e-mail responde à pessoa). Contra spam: campo-isca
+  `site`, envio em menos de 3 s ignorado e filtro `onlyRunIf` no webhook (não
+  gasta execução do n8n). Guarda a página e os `utm_source/medium/campaign`
+  do link, para medir os anúncios. LGPD: aceite obrigatório; todo dia 1º o
+  n8n apaga pedidos com mais de 12 meses, menos os com `situacao = cliente`
+  (e-mails do Gmail: apagar à mão); a Política de Privacidade descreve isso.
+  Mudou um campo: mudar o componente, o nó "Conferir e organizar pedido",
+  as colunas da tabela e a política.
 - **O endereço de e-mail não aparece escrito na página** (cartão "Solicite sua
   proposta" e rodapé): os botões dizem "Enviar e-mail" e abrem o programa de
   e-mail com assunto e um roteiro para o cliente completar (`linkEmail` em

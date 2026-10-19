@@ -10,7 +10,6 @@ import {
   IconeCalendario,
   IconeConversa,
   IconeDocumento,
-  IconeEmail,
   IconeEquipe,
   IconeGrafico,
   IconeIA,
@@ -29,7 +28,8 @@ import {
   ConversaSindico,
   PainelInicio,
 } from "@/components/ilustracoes";
-import { DEMONSTRACAO_EMAIL_LINK, JB_GESTAO_URL } from "@/lib/empresa";
+import { FormularioDemonstracao } from "@/components/formulario-demonstracao";
+import { JB_GESTAO_URL } from "@/lib/empresa";
 
 const descricao =
   "A portaria registra pelo WhatsApp, o sistema organiza e o síndico acompanha tudo em tempo real: ocorrências, encomendas, itens e estoque, agenda e reuniões, comunicados, orçamentos, compras e inteligência artificial.";
@@ -238,7 +238,7 @@ const PERGUNTAS = [
   },
   {
     p: "Como começamos?",
-    r: "Mande um e-mail pedindo uma demonstração. Mostramos o sistema funcionando, tiramos as dúvidas e, se fizer sentido, fazemos a configuração, o cadastro dos moradores e a orientação da equipe.",
+    r: "Preencha o formulário de demonstração no fim desta página (ou mande um e-mail). Mostramos o sistema funcionando, tiramos as dúvidas e, se fizer sentido, fazemos a configuração, o cadastro dos moradores e a orientação da equipe.",
   },
 ];
 
@@ -538,26 +538,36 @@ export default function ComoFunciona() {
         </div>
       </section>
 
-      {/* Chamada final */}
-      <section className="px-4 pb-20 sm:px-6">
+      {/* Chamada final com o formulário "Agendar demonstração" (18/10/2026; antes era só
+          o botão de e-mail, que continua como alternativa dentro do formulário). */}
+      <section id="demonstracao" className="scroll-mt-20 px-4 pb-20 sm:px-6">
         <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl bg-jb-navy shadow-jb">
           <div className="h-1.5 bg-gradient-to-r from-jb-navy via-jb-navy to-jb-orange" />
-          <div className="flex flex-col items-start gap-6 p-8 md:flex-row md:items-center md:justify-between md:p-12">
+          <div className="grid gap-8 p-6 sm:p-8 md:p-12 lg:grid-cols-[1fr_1.35fr]">
             <div className="flex items-start gap-4">
               <IconeAutomacao className="hidden h-10 w-10 shrink-0 text-jb-orange sm:block" />
               <div>
                 <h2 className="font-display text-2xl font-extrabold text-white sm:text-3xl">
                   Veja o JB Gestão funcionando no seu condomínio
                 </h2>
-                <p className="mt-2 text-white/75">
-                  Peça uma demonstração por e-mail. Atendemos condomínios de todo o Brasil.
+                <p className="mt-3 text-white/75">
+                  Agende uma demonstração. Atendemos condomínios de todo o Brasil.
                 </p>
+                <ul className="mt-6 space-y-3 text-sm text-white/85">
+                  {[
+                    "Cerca de 20 minutos, online",
+                    "O sistema de verdade, com um condomínio de dados fictícios",
+                    "Sem compromisso: tire as dúvidas e receba a proposta",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-jb-orange" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-            <a href={DEMONSTRACAO_EMAIL_LINK} className={`${botaoPrincipal} shrink-0`}>
-              <IconeEmail className="h-5 w-5" />
-              Solicitar demonstração
-            </a>
+            <FormularioDemonstracao />
           </div>
         </div>
       </section>
