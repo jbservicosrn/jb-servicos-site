@@ -63,8 +63,10 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   teste com o próprio condomínio**, prorrogáveis conforme a necessidade e o
   porte. No painel: o ADM JB cria o condomínio em `/admin` com licença tipo
   "demonstração" e fim = início + 7 dias (vencida, fica só leitura; prorrogar
-  = mudar a data de fim). O site não diz "grátis" nem fala de implantação no
-  teste até o dono decidir.
+  = mudar a data de fim). O teste é **grátis** e **o próprio condomínio
+  cadastra as unidades** (pelo painel ou importando planilha; a JB não faz a
+  implantação no teste). Ao criar o condomínio de teste, pôr o pacote mensal
+  de WhatsApp (`whatsapp_limite_mensal`) em **100 mensagens**.
 - **O endereço de e-mail não aparece escrito na página** (cartão "Solicite sua
   proposta" e rodapé): os botões dizem "Enviar e-mail" e abrem o programa de
   e-mail com assunto e um roteiro para o cliente completar (`linkEmail` em

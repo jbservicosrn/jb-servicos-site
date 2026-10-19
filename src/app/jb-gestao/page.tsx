@@ -238,7 +238,7 @@ const PERGUNTAS = [
   },
   {
     p: "Como começamos?",
-    r: "Preencha o formulário de demonstração no fim desta página (ou mande um e-mail). Mostramos o sistema funcionando, tiramos as dúvidas e liberamos 7 dias de teste com o seu próprio condomínio (prazo maior conforme a necessidade e o porte). Se fizer sentido, seguimos com a configuração completa, o cadastro dos moradores e a orientação da equipe.",
+    r: "Preencha o formulário de demonstração no fim desta página (ou mande um e-mail). Mostramos o sistema funcionando, tiramos as dúvidas e liberamos 7 dias de teste grátis com o seu próprio condomínio (prazo maior conforme a necessidade e o porte). No teste, o próprio condomínio cadastra as unidades pelo painel, inclusive importando uma planilha. Se fizer sentido, seguimos com a configuração completa, o cadastro dos moradores e a orientação da equipe.",
   },
 ];
 
@@ -556,7 +556,7 @@ export default function ComoFunciona() {
                 <ul className="mt-6 space-y-3 text-sm text-white/85">
                   {[
                     "Apresentação online de cerca de 20 minutos, com um condomínio de dados fictícios",
-                    "Depois, 7 dias de teste com o seu próprio condomínio: a portaria registra pelo WhatsApp e você acompanha pelo painel",
+                    "Depois, 7 dias de teste grátis com o seu próprio condomínio: vocês cadastram as unidades, a portaria registra pelo WhatsApp e você acompanha pelo painel",
                     "Prazo maior conforme a necessidade e o porte do condomínio",
                     "Sem compromisso: tire as dúvidas e receba a proposta",
                   ].map((item) => (

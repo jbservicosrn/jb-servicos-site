@@ -89,7 +89,7 @@ export function FormularioDemonstracao() {
         <h3 className="mt-4 font-display text-xl font-extrabold text-jb-navy">Pedido enviado!</h3>
         <p className="mt-2 text-sm leading-relaxed text-jb-ink-soft">
           Obrigado. Vamos responder por e-mail para combinar o melhor dia e horário da apresentação
-          e, em seguida, liberar os 7 dias de teste com o seu condomínio.
+          e, em seguida, liberar os 7 dias de teste grátis com o seu condomínio.
         </p>
       </div>
     );
