@@ -312,6 +312,23 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   user_agent "node" ou "Vercel Edge Functions" são scripts/automação, não
   clientes. O acesso Android de 28/09 14:20 foi de cliente.
 
+## Google (SEO) — base técnica (18/10/2026)
+
+- Endereço principal com www: `SITE_URL` = `https://www.jbservicosrn.com.br`
+  (a raiz redireciona para o www). Toda página tem `alternates.canonical`.
+- `/sitemap.xml` (`src/app/sitemap.ts`) e `/robots.txt` (`src/app/robots.ts`).
+  **Página nova = linha nova no sitemap.**
+- Títulos para busca: `/` "Terceirização de portaria, limpeza e jardinagem
+  para condomínios em Natal/RN | JB Serviços"; `/jb-gestao` "Sistema de
+  gestão para condomínios em Natal/RN | JB Gestão Condominial". A prévia de
+  compartilhamento (openGraph) continua "JB Serviços" / "JB Gestão
+  Condominial".
+- Dados estruturados (JSON-LD, `src/components/dados-estruturados.tsx`):
+  Organization na página inicial e SoftwareApplication em `/jb-gestao`. Sem
+  telefone, e-mail ou avaliações.
+- Pendente: verificar o site no Google Search Console (conta Google da JB) e
+  enviar o sitemap por lá.
+
 ## Visitas do site (Vercel Web Analytics)
 
 - Ativado em 29/09/2026: componente `<Analytics />` em `src/app/layout.tsx`

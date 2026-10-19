@@ -12,11 +12,20 @@ import {
   IconeSeta,
   IconeTransparencia,
 } from "@/components/icones";
+import type { Metadata } from "next";
+import { DadosEstruturados, ORGANIZACAO } from "@/components/dados-estruturados";
 import {
   EMPRESA_FUNDACAO,
   JB_GESTAO_URL,
   PROPOSTA_EMAIL_LINK,
 } from "@/lib/empresa";
+
+// Título para o Google com o que as pessoas procuram (18/10/2026); a prévia de
+// compartilhamento continua a do layout ("JB Serviços").
+export const metadata: Metadata = {
+  title: "Terceirização de portaria, limpeza e jardinagem para condomínios em Natal/RN | JB Serviços",
+  alternates: { canonical: "/" },
+};
 
 const SERVICOS = [
   {
@@ -100,6 +109,7 @@ function TituloSecao({ rotulo, titulo, claro }: { rotulo: string; titulo: string
 export default function Inicio() {
   return (
     <main>
+      <DadosEstruturados dados={ORGANIZACAO} />
       {/* Destaque */}
       <section className="bg-white">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 md:grid-cols-[1.2fr_1fr] md:py-24">

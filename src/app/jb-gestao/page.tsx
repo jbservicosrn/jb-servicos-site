@@ -30,6 +30,7 @@ import {
 } from "@/components/ilustracoes";
 import { FormularioDemonstracao } from "@/components/formulario-demonstracao";
 import { FormularioMaterial } from "@/components/formulario-material";
+import { DadosEstruturados, JB_GESTAO } from "@/components/dados-estruturados";
 import { JB_GESTAO_URL } from "@/lib/empresa";
 
 const descricao =
@@ -39,9 +40,15 @@ const descricao =
 // "JB Gestão Condominial" em vez do da página inicial (pedido de 27/09/2026).
 // O openGraph da página substitui o do layout inteiro, por isso repete
 // siteName, locale e type.
+// Título e descrição para o Google (18/10/2026): com as palavras que o síndico(a)
+// digita ("sistema de gestão para condomínios") e a região. A prévia de
+// compartilhamento (openGraph) continua com o nome do produto.
+const descricaoBusca =
+  "Sistema de gestão para condomínios: a portaria registra pelo WhatsApp e o síndico(a) acompanha ocorrências, encomendas, obras e compras. Teste grátis por 7 dias.";
+
 export const metadata: Metadata = {
-  title: "Como funciona o JB Gestão Condominial — JB Serviços",
-  description: descricao,
+  title: "Sistema de gestão para condomínios em Natal/RN | JB Gestão Condominial",
+  description: descricaoBusca,
   alternates: { canonical: "/jb-gestao" },
   openGraph: {
     title: "JB Gestão Condominial",
@@ -284,6 +291,7 @@ function Passo({
 export default function ComoFunciona() {
   return (
     <main>
+      <DadosEstruturados dados={JB_GESTAO} />
       {/* Abertura */}
       <section className="bg-jb-navy">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-8 pt-12 sm:px-6 md:grid-cols-[1.15fr_1fr] md:pt-14">

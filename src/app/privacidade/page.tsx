@@ -12,6 +12,9 @@ const ATUALIZADA_EM = "18/10/2026";
 
 export const metadata: Metadata = {
   title: "Política de Privacidade — JB Serviços",
+  description:
+    "Como a JB Serviços trata os dados pessoais recebidos pelo site e pelos formulários, conforme a LGPD.",
+  alternates: { canonical: "/privacidade" },
 };
 
 export default function Privacidade() {

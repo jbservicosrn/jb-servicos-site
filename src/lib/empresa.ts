@@ -57,4 +57,7 @@ export const DEMONSTRACAO_EMAIL_LINK = linkEmail("Demonstração do JB Gestão C
 export const PEDIDO_DEMONSTRACAO_URL = "https://jbservicos.app.n8n.cloud/webhook/site-pedido-demonstracao";
 
 export const JB_GESTAO_URL ="https://jb-gestao-cond.jbservicosrn.com.br";
-export const SITE_URL = "https://jbservicosrn.com.br";
+// Endereço principal com "www" (18/10/2026): a raiz redireciona (308) para o
+// www, então canonical, mapa do site e dados estruturados usam este, para o
+// Google não receber dois endereços para a mesma página.
+export const SITE_URL = "https://www.jbservicosrn.com.br";
