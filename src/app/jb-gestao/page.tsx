@@ -238,7 +238,7 @@ const PERGUNTAS = [
   },
   {
     p: "Como começamos?",
-    r: "Preencha o formulário de demonstração no fim desta página (ou mande um e-mail). Mostramos o sistema funcionando, tiramos as dúvidas e, se fizer sentido, fazemos a configuração, o cadastro dos moradores e a orientação da equipe.",
+    r: "Preencha o formulário de demonstração no fim desta página (ou mande um e-mail). Mostramos o sistema funcionando, tiramos as dúvidas e liberamos 7 dias de teste com o seu próprio condomínio (prazo maior conforme a necessidade e o porte). Se fizer sentido, seguimos com a configuração completa, o cadastro dos moradores e a orientação da equipe.",
   },
 ];
 
@@ -555,8 +555,9 @@ export default function ComoFunciona() {
                 </p>
                 <ul className="mt-6 space-y-3 text-sm text-white/85">
                   {[
-                    "Cerca de 20 minutos, online",
-                    "O sistema de verdade, com um condomínio de dados fictícios",
+                    "Apresentação online de cerca de 20 minutos, com um condomínio de dados fictícios",
+                    "Depois, 7 dias de teste com o seu próprio condomínio: a portaria registra pelo WhatsApp e você acompanha pelo painel",
+                    "Prazo maior conforme a necessidade e o porte do condomínio",
                     "Sem compromisso: tire as dúvidas e receba a proposta",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">

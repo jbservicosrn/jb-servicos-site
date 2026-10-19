@@ -58,6 +58,13 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   (e-mails do Gmail: apagar à mão); a Política de Privacidade descreve isso.
   Mudou um campo: mudar o componente, o nó "Conferir e organizar pedido",
   as colunas da tabela e a política.
+- **Como é a demonstração (decisão do dono, 18/10/2026):** apresentação
+  online de ~20 min (Condomínio Demonstração) e, no fim dela, **7 dias de
+  teste com o próprio condomínio**, prorrogáveis conforme a necessidade e o
+  porte. No painel: o ADM JB cria o condomínio em `/admin` com licença tipo
+  "demonstração" e fim = início + 7 dias (vencida, fica só leitura; prorrogar
+  = mudar a data de fim). O site não diz "grátis" nem fala de implantação no
+  teste até o dono decidir.
 - **O endereço de e-mail não aparece escrito na página** (cartão "Solicite sua
   proposta" e rodapé): os botões dizem "Enviar e-mail" e abrem o programa de
   e-mail com assunto e um roteiro para o cliente completar (`linkEmail` em
