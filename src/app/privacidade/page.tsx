@@ -27,21 +27,24 @@ export default function Privacidade() {
 
         <h2>1. Quais dados coletamos</h2>
         <p>
-          Este site não tem cadastro nem login e não usa cookies de rastreamento ou publicidade. O
-          único lugar em que pedimos dados pessoais é o formulário de demonstração do JB Gestão
-          Condominial, preenchido só por quem quiser.
+          Este site não tem cadastro nem login e não usa cookies de rastreamento ou publicidade. Só
+          pedimos dados pessoais em dois formulários da página do JB Gestão Condominial, preenchidos
+          só por quem quiser: o de demonstração e o do modelo gratuito de relatório para assembleia.
         </p>
 
-        <h2>2. Formulário de demonstração e contato por e-mail</h2>
+        <h2>2. Formulários e contato por e-mail</h2>
         <p>
           No formulário de demonstração recebemos o que você preencher: nome, função no condomínio,
           nome e cidade do condomínio, quantidade de unidades, e-mail, telefone (opcional), melhores
-          horários e mensagem, além da página do site e do anúncio ou link de onde você veio. Quando
-          você fala com a gente por e-mail, recebemos as informações que decidir enviar.
+          horários e mensagem. No formulário do modelo gratuito, recebemos nome, função, nome do
+          condomínio e e-mail. Nos dois, registramos também a página do site e o anúncio ou link de
+          onde você veio. Quando você fala com a gente por e-mail, recebemos as informações que
+          decidir enviar.
         </p>
         <p>
-          Usamos esses dados apenas para responder ao seu pedido, combinar a demonstração e preparar
-          propostas, com base no seu pedido e na autorização que você marca no formulário. Não os
+          Usamos esses dados apenas para responder ao seu pedido, combinar a demonstração, oferecer
+          os serviços da JB a quem baixou o modelo e preparar propostas, com base no seu pedido e na
+          autorização que você marca no formulário. Não os
           vendemos nem repassamos a terceiros. Os pedidos ficam no e-mail da JB Serviços (Google) e
           na nossa ferramenta de automação (n8n), e os de quem não fechar contrato são apagados em
           até 12 meses.

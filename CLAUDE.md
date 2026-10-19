@@ -58,6 +58,19 @@ Mesmos tokens do painel (`tailwind.config.ts` copiado de lá): `jb-navy`
   (e-mails do Gmail: apagar à mão); a Política de Privacidade descreve isso.
   Mudou um campo: mudar o componente, o nó "Conferir e organizar pedido",
   as colunas da tabela e a política.
+- **Modelo gratuito "Relatório de gestão para a assembleia" (18/10/2026):**
+  seção `#modelo-relatorio` de `/jb-gestao` (antes das perguntas
+  frequentes), `src/components/formulario-material.tsx`: nome, função,
+  condomínio, e-mail e autorização ("para liberar o modelo e entrar em contato
+  sobre o JB Gestão"); depois do envio aparece o botão de download de
+  `public/modelo-relatorio-assembleia.pdf`. Vai ao mesmo webhook com
+  `tipo=material` (coluna `tipo` da tabela; e-mail "Baixou o modelo de
+  relatório — …"). Envio, isca e aceite são comuns aos dois formulários
+  (`src/components/envio-pedido.tsx`). Fonte editável do PDF: Drive ›
+  Comercial › "Modelo de relatório para assembleia — arquivos de edição"
+  (HTML → PDF pelo Edge headless); mudou o PDF, copiar de novo para
+  `public/` com o mesmo nome. O botão do PDF leva a `/jb-gestao` com
+  `utm_source=pdf&utm_campaign=modelo-relatorio`.
 - **Como é a demonstração (decisão do dono, 18/10/2026):** apresentação
   online de ~20 min (Condomínio Demonstração) e, no fim dela, **7 dias de
   teste com o próprio condomínio**, prorrogáveis conforme a necessidade e o

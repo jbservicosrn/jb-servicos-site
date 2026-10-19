@@ -1,84 +1,26 @@
 "use client";
 
-import { useEffect, useRef, useState, type FormEvent } from "react";
-import { DEMONSTRACAO_EMAIL_LINK, PEDIDO_DEMONSTRACAO_URL } from "@/lib/empresa";
+import { DEMONSTRACAO_EMAIL_LINK } from "@/lib/empresa";
+import {
+  CampoAceite,
+  CampoIsca,
+  FUNCOES,
+  estiloCampo as campo,
+  estiloRotulo as rotulo,
+  useEnvioPedido,
+} from "@/components/envio-pedido";
 
-// Formulário "Agendar demonstração" (18/10/2026). O site continua estático: o
-// pedido vai direto para um webhook do n8n ("JB Serviços — Site — Pedidos de
-// demonstração"), que guarda numa tabela e avisa a JB pelo Gmail. Vai como
-// formulário simples (x-www-form-urlencoded) para o navegador não precisar
-// da consulta prévia de CORS.
-
-const FUNCOES = [
-  "Síndico(a) morador(a)",
-  "Síndico(a) profissional",
-  "Administradora",
-  "Conselho do condomínio",
-  "Morador(a)",
-  "Outra",
-];
+// Formulário "Agendar demonstração" (18/10/2026). Envio, isca contra robôs e
+// aceite da privacidade ficam em envio-pedido.tsx (comuns ao formulário do
+// modelo de relatório).
 
 // Mesmas faixas da tabela de preços (CLAUDE.md), para a proposta sair certa.
 const FAIXAS_UNIDADES = ["Até 60", "61 a 120", "121 a 250", "251 a 500", "501 a 1.000", "Mais de 1.000"];
 
 const CIDADES = ["Natal", "Parnamirim", "São Gonçalo do Amarante", "Macaíba", "Extremoz", "São José de Mipibu", "Nísia Floresta"];
 
-// Quem envia mais rápido que isto é robô: finge que deu certo e não manda nada.
-const TEMPO_MINIMO_MS = 3000;
-
-type Situacao = "preenchendo" | "enviando" | "enviado" | "erro";
-
-const campo =
-  "mt-1 w-full rounded-lg border border-jb-line bg-white px-3 py-2.5 text-sm text-jb-ink outline-none transition focus:border-jb-orange focus:ring-2 focus:ring-jb-orange/30";
-const rotulo = "block text-sm font-semibold text-jb-navy";
-
 export function FormularioDemonstracao() {
-  const [situacao, setSituacao] = useState<Situacao>("preenchendo");
-  const [erro, setErro] = useState("");
-  const abertoEm = useRef(Date.now());
-  const origem = useRef({ pagina: "", utm_source: "", utm_medium: "", utm_campaign: "" });
-
-  useEffect(() => {
-    const busca = new URLSearchParams(window.location.search);
-    origem.current = {
-      pagina: window.location.pathname,
-      utm_source: busca.get("utm_source") ?? "",
-      utm_medium: busca.get("utm_medium") ?? "",
-      utm_campaign: busca.get("utm_campaign") ?? "",
-    };
-  }, []);
-
-  async function enviar(evento: FormEvent<HTMLFormElement>) {
-    evento.preventDefault();
-    const dados = new FormData(evento.currentTarget);
-
-    if (dados.get("site") || Date.now() - abertoEm.current < TEMPO_MINIMO_MS) {
-      setSituacao("enviado");
-      return;
-    }
-
-    const corpo = new URLSearchParams();
-    dados.forEach((valor, chave) => {
-      if (typeof valor === "string") corpo.append(chave, valor);
-    });
-    corpo.set("aceite", dados.get("aceite") ? "sim" : "não");
-    Object.entries(origem.current).forEach(([chave, valor]) => corpo.set(chave, valor));
-
-    setSituacao("enviando");
-    setErro("");
-    try {
-      const resposta = await fetch(PEDIDO_DEMONSTRACAO_URL, { method: "POST", body: corpo });
-      const json = (await resposta.json().catch(() => null)) as { ok?: boolean; erro?: string } | null;
-      if (resposta.ok && json?.ok) {
-        setSituacao("enviado");
-        return;
-      }
-      setErro(json?.erro ?? "Não conseguimos enviar agora.");
-    } catch {
-      setErro("Não conseguimos enviar agora. Confira sua conexão com a internet.");
-    }
-    setSituacao("erro");
-  }
+  const { situacao, erro, enviar } = useEnvioPedido("demonstracao");
 
   if (situacao === "enviado") {
     return (
@@ -187,24 +129,11 @@ export function FormularioDemonstracao() {
           />
         </label>
 
-        {/* Isca para robôs: escondida de quem usa o site; se vier preenchida, o pedido é descartado. */}
-        <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
-          <label>
-            Site
-            <input name="site" tabIndex={-1} autoComplete="off" />
-          </label>
-        </div>
+        <CampoIsca />
 
-        <label className="flex items-start gap-3 text-sm text-jb-ink-soft sm:col-span-2">
-          <input type="checkbox" name="aceite" required className="mt-0.5 h-4 w-4 shrink-0 accent-jb-orange" />
-          <span>
-            Autorizo a JB Serviços a usar estes dados só para responder a este pedido, conforme a{" "}
-            <a href="/privacidade" className="text-jb-orange-600 underline">
-              Política de Privacidade
-            </a>
-            . *
-          </span>
-        </label>
+        <div className="sm:col-span-2">
+          <CampoAceite />
+        </div>
       </div>
 
       {situacao === "erro" && (

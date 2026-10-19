@@ -29,6 +29,7 @@ import {
   PainelInicio,
 } from "@/components/ilustracoes";
 import { FormularioDemonstracao } from "@/components/formulario-demonstracao";
+import { FormularioMaterial } from "@/components/formulario-material";
 import { JB_GESTAO_URL } from "@/lib/empresa";
 
 const descricao =
@@ -519,6 +520,33 @@ export default function ComoFunciona() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Material gratuito (18/10/2026): o contato entra na tabela do n8n com tipo "material". */}
+      <section id="modelo-relatorio" className="scroll-mt-20 mx-auto max-w-6xl px-4 pt-20 sm:px-6">
+        <div className="grid items-center gap-8 lg:grid-cols-[1fr_1.15fr]">
+          <div>
+            <Titulo
+              rotulo="Material gratuito"
+              titulo="Modelo de relatório de gestão para a assembleia"
+              texto="Um roteiro pronto para o síndico(a) e a administração prestarem contas da operação do condomínio, com números."
+            />
+            <ul className="mt-6 space-y-3 text-sm text-jb-ink-soft">
+              {[
+                "Resumo do período, ocorrências, portaria, manutenção, obras e compras",
+                "Quadros para comparar com o período anterior",
+                "Dicas do que a assembleia costuma perguntar",
+                "PDF de 9 páginas, pronto para imprimir e preencher",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-jb-orange" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <FormularioMaterial />
         </div>
       </section>
 
