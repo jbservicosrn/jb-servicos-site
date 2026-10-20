@@ -421,8 +421,16 @@ continua dizendo "sob consulta": só mostrar preço quando o dono pedir.
 - **Envio pelo bot da JB** (convites e comunicados, limite de 10 destinatários
   por envio; aguarda modelos da Meta): a Meta cobra cada mensagem. Incluso no
   Gestão enquanto for limitado a 10 por envio; envio em massa aos moradores
-  pelo bot é do módulo "Atendimento ao morador" (abaixo). Franquia ou preço
-  por mensagem a definir com o custo real medido.
+  pelo bot é do módulo "Atendimento ao morador" (abaixo).
+- **Pacote de mensagens de WhatsApp** (na proposta comercial desde
+  20/10/2026, valores sugeridos em 14/10 sobre o custo de R$ 0,035 por
+  mensagem): **3 mensagens por unidade por mês inclusas nos dois planos**;
+  pacotes extras mensais de **1.000 por R$ 89, 2.500 por R$ 199 e 5.000 por
+  R$ 349**. Contam os avisos de encomenda, comunicados e convites pelo número
+  da JB e avisos de ocorrência à gestão; a conversa da portaria com o bot não
+  conta. Ao acabar, os avisos seguem no painel e no e-mail. O limite de cada
+  condomínio é ajustado pelo ADM JB no painel. Revisar uma vez por ano ou
+  quando a Meta mudar o preço.
 - **Condomínios com portaria JB** (decisão de 11/10/2026, substitui a de
   04/10): **só o Operacional** vem incluso no contrato da portaria, **sem
   cobrança de implantação**. O Gestão é sob consulta, como para os demais
